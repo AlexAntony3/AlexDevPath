@@ -40,3 +40,12 @@ Another agile principle used was the MoSCoW method. The MoSCoW prioritisation me
 - As a user, I expect to be able to log out of my account to keep my details secure. 
 - As a user, I expect to be able to follow Alex on social media through the footer.
 
+### Developer Goals
+
+- The site should restrict users from entering invalid data into forms
+- The form must contain placeholder text in all fields to make it easier for the user to use.
+- A notification must appear when a user has successfully logged in.
+- A notification must appear when a user has logged out.
+- The website is viable and accessible on all browsers.
+- The website attractive and different when compared to other portfolio websites to make it stand out.
+- The website is responsive to multiple different size screens.
