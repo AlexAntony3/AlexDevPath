@@ -45,8 +45,6 @@ Another agile principle used was the MoSCoW method. The MoSCoW prioritisation me
 - As a staff member, I expect to be able to log out of my account to keep my details secure. 
 - As a staff member, I expect the interface to be simple to use. 
 
-
-
 ### Developer Goals
 
 - The site should restrict users from entering invalid data into forms
@@ -59,3 +57,11 @@ Another agile principle used was the MoSCoW method. The MoSCoW prioritisation me
 
 ### Expectations
 
+- I expect there to be confirmations and notifications of CRUD functionality.
+- I expect that when creating an account, the username must be unique and not copyable.
+- I expect there to be restrictions as to the limit of what a user can do.
+- I expect there to be less restriction as to the limit of what a staff member can do.
+
+### Requirements
+
+- 
