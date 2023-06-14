@@ -69,3 +69,7 @@ Another agile principle used was the MoSCoW method. The MoSCoW prioritisation me
 - Any errors must display and allow the user to understand why the error occurred.
 - The website must be responsive to all screen sizes.
 - The colour pallette must be consistent all the way through.
+
+## Design
+
+The design aspect of the website is a challenging topic as I religiously use pastel colours which I have seen to not be a great hit when it comes to enticing a user to stay in the website and also to make it stand out the crowd. For this reason, I completed a questionnaire which was completed by my collegues and friends to see what colour scheme they would prefer to see in a portfolio related page. The design choices laid ahead are the decisions made from the answers in the questionnaire. 
