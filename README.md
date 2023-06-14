@@ -64,4 +64,8 @@ Another agile principle used was the MoSCoW method. The MoSCoW prioritisation me
 
 ### Requirements
 
-- 
+- The website must be intuitive to use.
+- The website must be unique and entice the user to stay.
+- Any errors must display and allow the user to understand why the error occurred.
+- The website must be responsive to all screen sizes.
+- The colour pallette must be consistent all the way through.
