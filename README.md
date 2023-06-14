@@ -25,6 +25,18 @@ Another agile principle used was the MoSCoW method. The MoSCoW prioritisation me
 - A separate admin login for myself to manage CRUD functionality for appointments made. 
 - Professional and modern design.
 
-### User Goals
+### User Stories
 
 - As a user, I expect every web page to be consistent with the same header and footer.
+- As a user, I want to be able to see the work history of the Alex.
+- As a user, I want to be able to see a picture of Alex with a short description about himself.
+- As a user, I expect an easily navigatable web page that is simple.
+- As a user, I want to be able to see skills, proficincies and expectations of the site owner.
+- As a user, I expect to be able to be register an account.
+- As a user, I expect to be able to create an appointment with the site owner whilst being logged in.
+- As a user, I expect to view appointments set up with Alex whilst being logged in.
+- As a user, I expect to be able to edit appointments set up with Alex whilst being logged in.
+- As a user, I expect to be able to delete appointments set up with Alex whilst being logged in.
+- As a user, I expect to be able to log out of my account to keep my details secure. 
+- As a user, I expect to be able to follow Alex on social media through the footer.
+
