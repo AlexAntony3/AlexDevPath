@@ -22,7 +22,7 @@ Another agile principle used was the MoSCoW method. The MoSCoW prioritisation me
 - A form is required whereby the user can create a meeting with myself for any coding related topics.
 - Validation is required throughout to provide users with any feedback required.
 - I can review the database to manage user's forms and requirements.
-- A separate admin login for myself to manage CRUD functionality for appointments made. 
+- A separate staff login for myself and staff to manage CRUD functionality for appointments made. 
 - Professional and modern design.
 
 ### User Stories
@@ -35,10 +35,17 @@ Another agile principle used was the MoSCoW method. The MoSCoW prioritisation me
 - As a user, I expect to be able to be register an account.
 - As a user, I expect to be able to create an appointment with the site owner whilst being logged in.
 - As a user, I expect to view appointments set up with Alex whilst being logged in.
-- As a user, I expect to be able to edit appointments set up with Alex whilst being logged in.
-- As a user, I expect to be able to delete appointments set up with Alex whilst being logged in.
-- As a user, I expect to be able to log out of my account to keep my details secure. 
 - As a user, I expect to be able to follow Alex on social media through the footer.
+
+### Staff Member Stories
+
+- As a staff member, I expect to have a higher access account compared to the user.
+- As a staff member, I expect to be able to edit appointments set up with Alex whilst being logged in.
+- As a staff member, I expect to be able to delete appointments set up with Alex whilst being logged in.
+- As a staff member, I expect to be able to log out of my account to keep my details secure. 
+- As a staff member, I expect the interface to be simple to use. 
+
+
 
 ### Developer Goals
 
@@ -49,3 +56,6 @@ Another agile principle used was the MoSCoW method. The MoSCoW prioritisation me
 - The website is viable and accessible on all browsers.
 - The website attractive and different when compared to other portfolio websites to make it stand out.
 - The website is responsive to multiple different size screens.
+
+### Expectations
+
