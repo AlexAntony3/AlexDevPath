@@ -95,4 +95,9 @@ Multiple icons are used throughout the webapge, this is to increase the user exp
 
 ### Font
 
+As the webpage is designed to show my professional and educational life, it was important to show where my current path has led and to reflect that, the fonts that were decided on were: 
+* Source Code Pro is the main font for all text within the website, this portrays a coding stlye making it relevant to the website purpose. Furthermore the readability of the font is clear and spaced out well.
+* Kanit is the other font used in the project, this font is to be used for all titles and the logo. It is a clear bold font and it stands out from the page. 
+
+
 
