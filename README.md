@@ -88,4 +88,11 @@ The interview questions feedback gained meant that the following colour scheme w
 |#FFB703|This initial shade of yellow is used for contrasting text colour when a blue background is present.|
 |#FB8500|This is the second main colour in the webpage, this colour is primarily used as the pop out colour from the background. This colour will be used to display important information and draw the users eyes to it.|
 
+### Icons
+
+Multiple icons are used throughout the webapge, this is to increase the user experience and make the purpose of buttons / information sources easier to understand. [Font Awesome](https://fontawesome.com/ "Font Awesome") was used as the source of the icons.
+[Favicon](https://favicon.io "Favicon") was also another source of icon used however this supplied an identifier for the website when a user visits. The icon is recognisable and is indicative of the type of website.
+
+### Font
+
 
