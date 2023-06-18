@@ -73,3 +73,19 @@ Another agile principle used was the MoSCoW method. The MoSCoW prioritisation me
 ## Design
 
 The design aspect of the website is a challenging topic as I religiously use pastel colours which I have seen to not be a great hit when it comes to enticing a user to stay in the website and also to make it stand out the crowd. For this reason, I completed a questionnaire which was completed by my collegues and friends to see what colour scheme they would prefer to see in a portfolio related page. The design choices laid ahead are the decisions made from the answers in the questionnaire. 
+
+### Colour Scheme
+
+The interview questions feedback gained meant that the following colour scheme was selected. The main properties to be concerned about with the colour scheme was the fact that the text colour is required to contrast against the background so that all text is legible. Another property to be mindful was to also try and avoid only using pastel colours and make sure that the colour scheme is modern. 
+
+![colour palette](docs/colour_palette.png "Colour Palette")
+
+| Colour (Hex) | Use |
+|--|--|
+|#8ECAE6|The lightest of all the colours in the palette, this colour is used for the minor elements such as the border for images. |
+|#219EBC|This is the second shade of blue that is used in this webpage. It is to be used as contrasting text colour when compared to the other orange colours used.|
+|#023047|This final blue shade is the darkest and also the main colour scheme of the website, this colour will be used primarily as the background colour.|
+|#FFB703|This initial shade of yellow is used for contrasting text colour when a blue background is present.|
+|#FB8500|This is the second main colour in the webpage, this colour is primarily used as the pop out colour from the background. This colour will be used to display important information and draw the users eyes to it.|
+
+
