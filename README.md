@@ -76,7 +76,7 @@ The design aspect of the website is a challenging topic as I religiously use pas
 
 ### Colour Scheme
 
-The interview questions feedback gained meant that the following colour scheme was selected. The main properties to be concerned about with the colour scheme was the fact that the text colour is required to contrast against the background so that all text is legible. Another property to be mindful was to also try and avoid only using pastel colours and make sure that the colour scheme is modern. 
+The interview questions feedback gained meant that the following colour scheme was selected. The main properties to be concerned about with the colour scheme was the fact that the text colour is required to contrast against the background so that all text is legible. Another property to be mindful was to also try and avoid only using pastel colours and make sure that the colour scheme is modern. The colour scheme below was generated using [Coolors](https://coolors.co/?home "Coolors")
 
 ![colour palette](docs/colour_palette.png "Colour Palette")
 
