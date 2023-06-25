@@ -99,5 +99,22 @@ As the webpage is designed to show my professional and educational life, it was 
 * Source Code Pro is the main font for all text within the website, this portrays a coding stlye making it relevant to the website purpose. Furthermore the readability of the font is clear and spaced out well.
 * Kanit is the other font used in the project, this font is to be used for all titles and the logo. It is a clear bold font and it stands out from the page. 
 
+### Wireframes
+
+## Technologies Used
+
+### Languages
+
+* HTML
+* CSS
+
+### Libraries and Frameworks
+
+### Tools
+
+* GitPod
+* GitHub
+* Git
+
 
 
