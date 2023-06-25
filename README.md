@@ -118,6 +118,54 @@ As the webpage is designed to show my professional and educational life, it was 
 
 ## Deployment
 
+One of the first and most important things to do in the project, is to deploy to heroku. This prevents any unexpected errors to appear and makes life a lot easier. 
+
+Once the Django project is created after all supporting libraries are installed, I migrated the database. It is important to note only add sufficient items for you to be able to verify that the logic works as expected as you may want to update the models later on in the project. 
+
+The database used within the workspace environment is db.sqlite3. As this cannot be used when deployed to Heroku, a new database is required for production. Heroku offers postgreSQL as a database management system which can be utilised using ElephantSQL (it's free!)
+
+### Installing Django and supporting libraries
+
+To install Django and gunicorn, enter the following into the terminal:
+
+    pip3 install 'django<4' gunicorn
+To install the supporting libraries, enter the following into the terminal:
+
+    pip3 install dj_database_url==0.5.0 psycopg2
+To install Cloudinary libraries, enter the following into the terminal:
+
+    pip3 install dj3-cloudinary-storage
+    pip3 install urllib3==1.26.15
+Create a requirements file
+
+    pip3 freeze --local > requirements.txt
+Create Project:
+
+    django-admin startproject **Project name goes here**.
+Create App:
+
+    python3 manage.py startapp **App name goes here**
+
+
+### Heroku
+
+* **Log in** to your [Heroku](https://www.heroku.com/  "Heroku") account or **sign up** if it's your first time.
+* Activate the Heroku Student Pack as per the instructions on the **Deployments module** in the Love Sandwiches project.
+* On the home page, click the **Create new app** button.
+* Write an **App name** that is unique, the input bar validation will guide you if the app name has been used before or is available.
+* Select the **region** that corresponds to where you are situated.
+* Click the **Create app** button
+* Click on the **settings** tab and click on **config vars** button.
+*  Add a Config var with a key of `PORT` and a value of `8000`.
+* If there are any sensative information required for the app to function such as emails, this is to be stored in a **.json** file and also added to the **config vars**. 
+* Add  **buildpacks** , by clicking **Add buildback** and click on **python** and click **save changes**. 
+* Add another buildback and click on **node.js** and click save changes. The order must be **Python** then **node.js**.
+*  Click on the **Deploy** section and in the deployment method click on **GitHub**.
+* Search for the **respository** to be deployed and click **connect**.
+* Scroll further down and in the automatic deploy section, click the **Enable Automatic Deploys** so that for every push from GitHub, the app is automatically updated. 
+* Finally click on **Deploy Branch** to deploy the application. 
+* Once the application is deployed, click on the **view** button to see the programme running. 
+
 ## Development
 
 ### Forking
