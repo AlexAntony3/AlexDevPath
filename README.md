@@ -154,3 +154,7 @@ If you would like to clone any repositories, follow the steps below:
 * To run the code on the development tool, type in the following to the terminal:
 > python3 manage.py runserver
 
+## Credits
+
+* [Simen Daehlin](https://www.linkedin.com/in/simendaehlin/ "Simen Daehlin") - Assistance throughout the project
+* My testing team, this was a team of my colleagues, friends and family. - Thank you for all the rigerous testing and feedback.
