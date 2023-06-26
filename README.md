@@ -155,18 +155,157 @@ Create App:
 * Write an **App name** that is unique, the input bar validation will guide you if the app name has been used before or is available.
 * Select the **region** that corresponds to where you are situated.
 * Click the **Create app** button
-* Click on the **settings** tab and click on **config vars** button.
-*  Add a Config var with a key of `PORT` and a value of `8000`.
-* If there are any sensative information required for the app to function such as emails, this is to be stored in a **.json** file and also added to the **config vars**. 
-* Add  **buildpacks** , by clicking **Add buildback** and click on **python** and click **save changes**. 
-* Add another buildback and click on **node.js** and click save changes. The order must be **Python** then **node.js**.
-*  Click on the **Deploy** section and in the deployment method click on **GitHub**.
+
+## Development
+### Settings.py
+
+* In settings.py, in the INSTALLED_APPS add **App name**
+* Save the file
+
+In the terminal
+* Migrate the changes
+
+`python3 manage.py migrate`
+
+* run server to test
+
+`python3 manage.py runserver`
+
+ - A yellow error screen will appear stating 'DisallowedHost', copy the invalid HTTP HOST header into the square brackets of 'ALLOWED_HOSTS'.
+
+### Deploying the app to Heroku
+
+<details>
+<summary>1. Create a new external database</summary>
+
+* Create an account on **ElephantSQL.com**.
+* Log in with GitHub
+* Set up your plan using the **TINY TURTLE** plan.
+* Click **Select Region** and select a datacentre closest to you.
+* Click **Review** and after reviewing the details click **Create instance**
+* Navigate to the ElephantSQL dashboard and click on the **Database instance name**
+* Click the **copy** button next to the **database URL**, it will start with:
+
+`postgres://`
+
+</details>
+
+<details>
+<summary>2. Create an app in Heroku </summary>
+
+* In the settings tab, click **Reveal Config Vars**
+* Add a Config Var named **"DATABASE_URL"**, and paste in the copied **database URL** from ElephantSQL.com
+
+</details>
+
+<details>
+<summary>3. Attach the database </summary>
+
+ - In the GitHub IDE, create a file named **"env.py"** on the top level.
+ - In the **env.py** file, import **os**.
+ - Set an environment variable and a secret key variable.
+`os.environ["DATABASE_URL"]=**Paste the copied database URL**`
+`os.environ["SECRET_KEY"]=**Create your own secret key**`
+ - Finally in Heroku, open up the **Config Vars** and add **SECRET_KEY** with the secret key as the value.
+
+</details>
+
+<details>
+<summary>4. Prepare the environment and settings.py file </summary>
+
+In **settings.py** reference the env.py file by writing the following:
+
+    from pathlib import Path
+    import os
+    import dj_database_url
+
+    if os.path.isfile("env.py"):
+		import env
+
+ - Replace the insecure SECRET_KEY with:
+
+`SECRET_KEY = os.environ.get('SECRET_KEY')`
+
+ - Comment out the old DATABASES section.
+
+ - Add the new DATABASES section in the following format
+
+`DATABASES = {`
+`'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))`
+`}`
+
+* Finally in the terminal save all files and make migrations
+
+`python3 manage.py migrate`
+
+</details>
+
+<details>
+<summary>5. Cloudinary set up </summary>
+
+* Log into or sign up to a free account in Cloudinary.com
+* Copy the CLOUDINARY_URL from the dashboard
+* Paste the url into env.py with the following:
+
+`os.environ["CLOUDINARY_URL"]="copied cloudinary URL"`
+
+* In Heroku add another Config Vars named **CLOUDINARY URL** and paste in the URL as the value.
+* Add another Config Vars named **DISABLE_COLLECTSTATIC** with the value **1**, **note** this is temporary and will be removed.
+* Add **Cloudinary libraries** to installed apps in settings.py.
+
+> INSTALLED_APPS = [
+> …,
+> 
+> 'cloudinary_storage',
+> 
+> 'django.contrib.staticfiles',
+> 
+> 'cloudinary',
+> 
+> …,
+> 
+> ]
+
+* Assign Django to use Cloudinary
+
+> STATIC_URL = '/static/'
+> 
+>   
+> 
+> STATICFILES_STORAGE =
+> 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
+> 
+> STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]
+> 
+> STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+> 
+>   
+> 
+> MEDIA_URL = '/media/'
+> 
+> DEFAULT_FILE_STORAGE =
+> 'cloudinary_storage.storage.MediaCloudinaryStorage'
+
+* Under the **BASE_DIR** line, link templates directory to HEROKU.
+
+`TEMPLATES_DIR = os.path.join(BASE_DIR,'templates')`
+
+* Change the templates directroy to **TEMPLATES_DIR** within the **TEMPLATES array**
+* Add **Heroku Hostname** to **ALLOWED_HOSTS**
+
+`["PROJECT_NAME.herokuapp.com", "YOUR_HOSTNAME"]`
+
+* In the IDE, at the top level of the directory, make the folders: **media, static, templates and Procfile**
+* In procfile, add the following code:
+
+`web: gunicorn "Project Name".wsgi`
+* Save all files, commit and push to the main branch.
+* Click on the **Deploy** section and in the deployment method click on **GitHub**.
 * Search for the **respository** to be deployed and click **connect**.
 * Scroll further down and in the automatic deploy section, click the **Enable Automatic Deploys** so that for every push from GitHub, the app is automatically updated. 
 * Finally click on **Deploy Branch** to deploy the application. 
 * Once the application is deployed, click on the **view** button to see the programme running. 
-
-## Development
+</details>
 
 ### Forking
 
