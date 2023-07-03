@@ -1,7 +1,7 @@
 ---
-name: 'Deployment: '
+name: Deployment
 about: This template is about the deployment steps.
-title: ''
+title: 'Deployment:'
 labels: ''
 assignees: ''
 
