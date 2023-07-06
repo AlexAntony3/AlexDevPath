@@ -25,3 +25,46 @@ class About(models.Model):
 
     def __str__(self):
         return self.title
+
+
+class Project(models.Model):
+    name = models.CharField(max_length=100, unique=True)
+    thumbnail = models.CloudinaryField('image')
+    skills = models.ManyToManyField('Skill')
+    description = models.TextField()
+    live_url = models.URLField()
+    github_URL = models.URLField()
+
+    def __str__(self):
+        return self.name
+
+
+class Skill(models.Model):
+    name = models.CharField(max_length=100)
+    proficiency = models.IntegerField()
+    icon = models.CloudinaryField('image')
+
+    def __str__(self):
+        return self.name
+
+
+class Experience(models.Model):
+    role = models.CharField(max_length=200)
+    company = models.CharField(max_length=300)
+    start_date = models.DateField()
+    end_date = models.DateField()
+    description = models.TextField()
+
+    def __str__(self):
+        return f'{self.role} at {self.company}'
+
+
+class Education(models.Model):
+    institute = models.CharField(max_length=200)
+    qualification = models.CharField(max_length=200)
+    start_date = models.DateField()
+    end_date = models.DateField()
+    description = models.TextField(null=True, blank=True)
+
+    def __str__(self):
+        return f'{self.qualification} from {self.institute}'
