@@ -68,3 +68,13 @@ class Education(models.Model):
 
     def __str__(self):
         return f'{self.qualification} from {self.institute}'
+
+
+class Contact(models.Model):
+    full_name = models.CharField(max_length=200)
+    number = models.CharField(max_length=16)
+    email = models.EmailField()
+    message = models.TextField()
+
+    def __str__(self):
+        return f'{self.full_name} sent a message stating {self.message}'
