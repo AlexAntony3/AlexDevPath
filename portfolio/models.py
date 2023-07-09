@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib import admin
 from cloudinary.models import CloudinaryField
 
 
