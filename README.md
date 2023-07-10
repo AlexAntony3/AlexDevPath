@@ -104,6 +104,79 @@ As the webpage is designed to show my professional and educational life, it was 
 
 ### Wireframes
 
+## Database Structure
+
+### Home Model
+
+|     Field Name    |       Type      |         Default Value        |
+|:-----------------:|:---------------:|:----------------------------:|
+|       title       |    CharField    | (max_length=200, blank=True) |
+|     main_image    | CloudinaryField |           ('image')          |
+|    name_header    |    CharField    |       (max_length=100)       |
+| intro_description |    TextField    |              ()              |
+
+### About Model
+
+|  Field Name  |       Type      |         Default Value         |
+|:------------:|:---------------:|:-----------------------------:|
+|     title    |    CharField    |  (max_length=50, blank=True)  |
+| second_image | CloudinaryField |           ('image')           |
+|  first_name  |    CharField    |  (max_length=80, unique=True) |
+|   last_name  |    CharField    |  (max_length=80, unique=True) |
+|      age     |   IntegerField  |    (null=True, blank=True)    |
+|  nationality |    CharField    |        (max_length=200)       |
+|   languages  |    CharField    |        (max_length=200)       |
+|    address   |    CharField    | (max_length=400, unique=True) |
+|   freelance  |   BooleanField  |        (default=False)        |
+
+### Project Model
+
+|  Field Name |       Type      |         Default Value         |
+|:-----------:|:---------------:|:-----------------------------:|
+|     name    |    CharField    | (max_length=100, unique=True) |
+|  thumbnail  | CloudinaryField |           ('image')           |
+|    skills   | ManyToManyField |           ('Skill')           |
+| description |    TextField    |               ()              |
+|   live_url  |     URLField    |               ()              |
+|  github_url |     URLField    |               ()              |
+
+### Skill Model
+
+|  Field Name |       Type      |   Default Value  |
+|:-----------:|:---------------:|:----------------:|
+|     name    |    CharField    | (max_length=100) |
+| proficiency |   IntegerField  |        ()        |
+|     icon    | CloudinaryField |     ('image')    |
+
+### Experience Model
+
+|  Field Name |    Type   |   Default Value  |
+|:-----------:|:---------:|:----------------:|
+|     role    | CharField | (max_length=200) |
+|   company   | CharField | (max_length=300) |
+|  start_date | DateField |        ()        |
+|   end_date  | DateField |        ()        |
+| description | TextField |        ()        |
+
+### Education Model
+
+|   Field Name  |    Type   |      Default Value      |
+|:-------------:|:---------:|:-----------------------:|
+|   institute   | CharField |     (max_length=200)    |
+| qualification | CharField |     (max_length=200)    |
+|   start_date  | DateField |            ()           |
+|    end_date   | DateField |            ()           |
+|  description  | TextField | (null=True, blank=True) |
+
+### Contact Model
+
+| Field Name |    Type    |   Default Value  |
+|:----------:|:----------:|:----------------:|
+|  full_name |  CharField | (max_length=200) |
+|   number   |  CharField |  (max_length=16) |
+|    email   | EmailField |        ()        |
+|   message  |  TextField |        ()        |
+
 ## Technologies Used
 
 ### Languages
