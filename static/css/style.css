@@ -1,8 +1,82 @@
-.background {
-    background: #fb8500;
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@500&family=Open+Sans:wght@300&family=Rubik:wght@500&family=Source+Code+Pro:wght@500&display=swap');
+
+:root {
+    --orange-background:#fb8500;
+    --blue-background:#023047;
+    --light-blue:#8ECAE6;
+    --medium-blue:#219EBC;
+    --light-yellow:#FFB703;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: 'Source Code Pro', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: 'Kanit', sans-serif;
+}
+
+h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    padding: 1rem;
+}
+
+h2 {
+    font-size: 3rem;
+    font-weight: 600;
+    padding: 1rem;
+}
+
+h3 {
+    font-size: 2rem;
+    font-weight: 400;
+    padding: 1rem;
+}
+
+h4 {
+    font-size: 1rem;
+    font-weight: 200;
+    padding: 1rem;
+}
+
+/* Home Page */
+.home-background {
+    background: var(--orange-background);
     background: linear-gradient(139deg, rgba(251,133,0,1) 30%, rgba(255,183,3,1) 100%);
 }
 
-.bg-custom-dark {
-    background: #023047;
+/* Nav Bar */
+.nav-bar-dark {
+    background: var(--blue-background);
+}
+
+.nav-item {
+    padding-left: 2rem;
+    font-size: 2rem;
+}
+
+.nav-link:hover {
+    color: var(--light-yellow) !important;
+}
+
+/* footer */
+
+#socials a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 2.5rem;
+}
+
+#socials a:hover {
+    color: var(--light-yellow);
 }
