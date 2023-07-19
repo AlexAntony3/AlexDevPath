@@ -1,20 +1,36 @@
 {% extends "base.html" %}
 
 {% block content %}
-
-<div class="container-fluid">
-    <div class="row home-background align-items-center justify-content-center">
+<div class="spacer">
+    &nbsp;
+</div>
+<div class="container-fluid h-100">
+    <div class="row home-background text-center">
         {% include 'components/home-screen.html' %}
     </div>
 </div>
 
+<div class="container-fluid background-whatever text-center">
+    <div class="row">
+        <div class="col-12">
+            <h2 id="title">Who am I ?</h2>
+        </div>
+    </div>
+</div>
 <div class="container-fluid pt-3 pb-4">
     <div class="row">
         {% include 'components/about.html' %}
     </div>
 </div>
 
-<div class="container pt-3 pb-4">
+<div class="container-fluid background-whatever text-center">
+    <div class="row">
+        <div class="col-12">
+            <h2 id="title">Projects</h2>
+        </div>
+    </div>
+</div>
+<div class="container-fluid h-100 pt-3 pb-4">
     <div class="row">
         <div class="col-sm-12">
             {% include 'pages/project.html' %}
@@ -22,20 +38,33 @@
     </div>
 </div>
 
-<div class="container pt-3 pb-4">
+<div class="container-fluid background-whatever text-center">
     <div class="row">
-        <div class="col-sm-6">
-            {% include 'components/education.html' %}
-        </div>
-        <div class="col-sm-6">
-            {% include 'components/experience.html' %}
+        <div class="col-12">
+            <h2 id="title">Education and Experience</h2>
         </div>
     </div>
 </div>
+<div class="row">
+    <div class="col-sm-6">
+        {% include 'components/education.html' %}
+    </div>
+    <div class="col-sm-6">
+        {% include 'components/experience.html' %}
+    </div>
+</div>
+</div>
 
+<div class="container-fluid background-whatever text-center">
+    <div class="row">
+        <div class="col-12">
+            <h2 id="title">Get in touch!</h2>
+        </div>
+    </div>
+</div>
 <div class="container">
     <div class="row">
-            {% include 'components/contact-form.html' %}
+        {% include 'components/contact-form.html' %}
     </div>
 </div>
 
