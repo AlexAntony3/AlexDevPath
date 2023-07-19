@@ -46,6 +46,16 @@ h3, h4, h5 {
     background: linear-gradient(139deg, rgba(251,133,0,1) 30%, rgba(255,183,3,1) 100%);
 }
 
+#hero-section {
+    padding: 5rem;
+    height: 96vh;
+}
+
+#hero-section img {
+    border-radius: 50rem;
+}
+
+
 /* Nav Bar */
 .nav-bar-dark {
     background: var(--blue-background);
