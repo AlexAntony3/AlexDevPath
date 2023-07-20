@@ -265,7 +265,7 @@ section#timeline article:nth-child(5) div.inner h2:after {
 
 .map-responsive {
     overflow: hidden;
-    padding-bottom: 56.25%;
+    padding-bottom: 40%;
     position: relative;
     height: 0;
 }
@@ -273,5 +273,7 @@ section#timeline article:nth-child(5) div.inner h2:after {
 .map-responsive iframe {
     left: 0;
     top: 0;
+    height: 100%;
+    width: 100%;
     position: absolute;
 }
