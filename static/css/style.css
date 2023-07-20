@@ -2,7 +2,7 @@
 
 :root {
     --orange-background: #fb8500;
-    --blue-background: #023047;
+    --blue-background: rgb(2, 48, 71);
     --light-blue: #8ECAE6;
     --medium-blue: #219EBC;
     --light-yellow: #FFB703;
@@ -15,6 +15,12 @@ html {
 body {
     font-size: 1.6rem;
     font-family: 'Source Code Pro', sans-serif;
+    background-color: #FFB703;
+    background-image: linear-gradient(45deg, #fb8500 33%,
+            transparent 33%, transparent 33%, #fb8500 66%),
+        linear-gradient(135deg, #fb8500 33%,
+            transparent 33%, transparent 66%, #fb8500 66%);
+    background-size: 35px 35px;
 }
 
 h1,
@@ -43,7 +49,7 @@ h5 {
 }
 
 /* Home Page */
-.home-background {
+.background {
     background: var(--orange-background);
     background: linear-gradient(139deg, rgba(251, 133, 0, 1) 30%, rgba(255, 183, 3, 1) 100%);
 }
