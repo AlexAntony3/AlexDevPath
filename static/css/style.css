@@ -13,14 +13,14 @@ html {
 }
 
 body {
-    font-size: 1.6rem;
-    font-family: 'Source Code Pro', sans-serif;
-    background-color: #FFB703;
-    background-image: linear-gradient(45deg, #fb8500 33%,
-            transparent 33%, transparent 33%, #fb8500 66%),
-        linear-gradient(135deg, #fb8500 33%,
-            transparent 33%, transparent 66%, #fb8500 66%);
-    background-size: 35px 35px;
+    background-image: linear-gradient(45deg,
+            rgba(251, 133, 0, 0.8) 100%,
+            transparent 10%),
+        linear-gradient(135deg, rgba(255, 183, 3, 0.5) 100%, transparent 100%),
+        linear-gradient(45deg, transparent 75%, rgba(251, 133, 0, 0.8) 25%),
+        linear-gradient(135deg, transparent 75%, rgba(255, 183, 3, 0.5) 100%);
+    background-size: 25px 25px;
+    background-position: 0 0, 12.5px 0, 12.5px -12.5px, 0 12.5px;
 }
 
 h1,
@@ -86,6 +86,74 @@ h5 {
 #navbarSupportedContent {
     padding-right: 5rem;
 }
+
+/* skills progress bar */
+
+.progress-section {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 15px;
+    background: #333;
+    padding: 1rem 2rem;
+    margin: 0 auto;
+}
+
+    .task-progress {
+        margin: 1.5rem 0;
+    }
+
+    .task-progress p {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: #eee;
+    }
+
+    span {
+        color: #eee;
+    }
+
+    .progress {
+        width: 100%;
+        -webkit-appearance: none;
+        appearance: none;
+        border: none;
+        border-radius: 10px;
+        height: 10px;
+    }
+
+    .progress::-webkit-progress-bar {
+        background-color: #f0f0f0;
+    }
+
+    .progress::-webkit-progress-bar,
+    .progress::-webkit-progress-value {
+        border-radius: 10px;
+    }
+
+    .progress::-moz-progress-bar {
+        border-radius: 10px;
+    }
+
+    .progress1::-webkit-progress-value {
+        background: #FB8500;
+    }
+
+    .progress2::-webkit-progress-value {
+        background: #FFB703;
+    }
+
+    .progress3::-webkit-progress-value {
+        background: #FB8500;
+    }
+
+    .progress4::-webkit-progress-value {
+        background: #FFB703;
+    }
+
+    .progress5::-webkit-progress-value {
+        background: #FB8500;
+    }
 
 /* Education and Experiences */
 
