@@ -89,9 +89,18 @@ h5 {
 
 /* skills progress bar */
 
+.skills-font {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.skills-title {
+    font-size: 4rem;
+}
+
 .progress-section {
     width: 100%;
-    max-width: 600px;
+    max-width: 70rem;
     border-radius: 15px;
     background: #333;
     padding: 1rem 2rem;
@@ -107,10 +116,12 @@ h5 {
         justify-content: space-between;
         align-items: center;
         color: #eee;
+        font-size: 1.5rem;
     }
 
     span {
         color: #eee;
+        font-size: 1.5rem;
     }
 
     .progress {
@@ -136,23 +147,23 @@ h5 {
     }
 
     .progress1::-webkit-progress-value {
-        background: #FB8500;
+        background: #219EBC;
     }
 
     .progress2::-webkit-progress-value {
-        background: #FFB703;
+        background: #8ECAE6;
     }
 
     .progress3::-webkit-progress-value {
-        background: #FB8500;
+        background: #219EBC;
     }
 
     .progress4::-webkit-progress-value {
-        background: #FFB703;
+        background: #8ECAE6;
     }
 
     .progress5::-webkit-progress-value {
-        background: #FB8500;
+        background: #219EBC;
     }
 
 /* Education and Experiences */
