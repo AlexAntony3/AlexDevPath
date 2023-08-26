@@ -196,6 +196,10 @@ span {
     height: 126.25px;
 }
 
+.footer-font {
+    font-size: 1.5rem;
+}
+
 /* timeline */
 
 
@@ -367,7 +371,32 @@ span {
     }
 }
 
+.content {
+    border: 1px dotted var(--blue-background);
+    background-color: rgba(142, 202, 230, 0.4);
+    padding: 2rem;
+    border-radius: 10%;
+}
+
 /* contact us form */
+
+.contact label {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.contact input {
+    font-size: 1.2rem;
+}
+
+.contact textarea {
+    font-size: 1.2rem;
+}
+
+.contact button {
+    font-size: 2rem;
+    padding: 1rem 3rem;
+}
 
 .map-responsive {
     overflow: hidden;
@@ -383,3 +412,4 @@ span {
     width: 100%;
     position: absolute;
 }
+
