@@ -383,6 +383,8 @@ In **settings.py** reference the env.py file by writing the following:
 * Once the application is deployed, click on the **view** button to see the programme running. 
 </details>
 
+## Local Development
+
 ### Forking
 
 If you would like to fork any repositories, follow the steps below:
@@ -407,15 +409,65 @@ If you would like to clone any repositories, follow the steps below:
 * In the **local** tab, select the **HTTPS** button and copy the URL.
 * Open up a new workspace
 * Use the `git clone` command In the command line of the workspace, paste in the copied URL. It should look like this:
-> git clone https://github.com/YOURUSERNAME/YOURREPOSITORY
+
+        git clone https://github.com/YOURUSERNAME/YOURREPOSITORY
+
 * Press **Enter** and the repository will be cloned!.
 
-### Local Development
 
 * After forking the repository, follow the cloning method to continue with development.
-* To run the programme on your development tool, make sure you have atleast version **3.8+** of python installed. 
+* Once you're repository is set up, open the repository on **Gitpod** and you need to download all the libraries and frameworks.
+
+        pip3 install -r requirements.txt
+
+* Create an **env.py** in the root directory and enter the following:
+
+**Note: the values for each key must not be shared and must be the same as what's entered into Heroku **
+
+    os.envrion['DATABASE_URL']  = "elephantSQL url"
+    os.environ['SECRET_KEY'] = "secret key you created"
+    os.environ['CLOUDINARY_URL'] = "APU url from cloudinary, **remember to remove the CLOUDINARY_URL=' from the URL**"
+
+* Now migrate all the models by entering:
+
+        python3 manage.py migrate
+
+* The next step is to create a superuser to be able to access the Django admin panel. 
+
+        python manage.py createsuperuser
+
+When creating a superuser, enter a username, email (optional) and password twice. When typing the password, it will not appear but it is being registered.
+
+* now we're nearly done! in the **settings.py** add:
+
+        .herokuapp.com,localhost
+
+* Finally commit and push the changes and you're good to go! 
+
+**Note: Make sure that the env.py variables are the same as what's entered into the config vars on Heroku. If this has not been completed yet, follow the next steps.**
+
+### Heroku Set up
+* Log in to your [Heroku](www.heroku.com) account and create an app. Choose an original name and select an appropriate region.
+
+* Go to the **settings** page and click **Reveal Config Vars** in the key and port values type the following:
+
+| Key | Value  |
+|--|--|
+| PORT | 8000 |
+| DATABASE_URL | Same entry as env.py |
+| SECRET_KEY | Same entry as env.py |
+| CLOUDINARY_URL | Same entry as env.py |
+
+* Scroll down to **Buildpacks** and press add. Select **Python** and then select **nodejs**. Make sure **nodejs** is below **Python**. 
+
+* Click on the **Deploy** button and if the website appears you're officially ready to go!
+
 * To run the code on the development tool, type in the following to the terminal:
-> python3 manage.py runserver
+
+        python3 manage.py runserver
+
+
+**Enjoy**
 
 ## Credits
 
