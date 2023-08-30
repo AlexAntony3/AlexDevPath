@@ -33,8 +33,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['alexdevpath-87b297ea99d1.herokuapp.com', '8000-alexantony3-alexdevpath-b3gkdeoxa3v.ws-eu104.gitpod.io', 'localhost']
 
-LOGIN_REDIRECT_URL = '/dashboard/'
-
 # Application definition
 
 INSTALLED_APPS = [
