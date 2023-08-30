@@ -97,6 +97,23 @@ h5 {
     border: 1rem solid var(--blue-background);
 }
 
+.about-me h5 {
+    font-size: 3.5rem;
+}
+
+.about-me li {
+    font-size: 2rem;
+    margin-left: 2rem;
+    font-weight: 600;
+    padding: 0.8rem;
+}
+
+.about-me span {
+    font-size: 2.0rem;
+    color: var(--blue-background);
+    padding: 1rem;
+}
+
 
 .skills-font {
     font-size: 1.8rem;
