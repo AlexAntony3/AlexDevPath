@@ -212,9 +212,9 @@ span {
     width: 100%;
 }
 
-#title {
-    color: white;
-    font-size: 6rem;
+.main-title {
+    color: #fff;
+    font-size: 4rem;
     letter-spacing: 0.6rem;
 }
 
