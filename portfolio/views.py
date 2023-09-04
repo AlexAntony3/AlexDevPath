@@ -24,8 +24,14 @@ def ShowAll(request):
     education = Education.objects.all()
     experience = Experience.objects.all()
     contact = Contact.objects.all()
+    projects = Project.objects.all()
     context = {
-        'home': home, 'about': about, 'education': education, 'experience': experience, 'contact': contact,
+        'home': home,
+        'about': about,
+        'education': education,
+        'experience': experience,
+        'contact': contact,
+        'projects': projects
         }
 
     return render(request, 'pages/home.html', context)
@@ -39,11 +45,6 @@ def SkillSection(request):
     }
 
     return render(request, 'pages/skill.html', context)
-
-
-def ProjectPage(request, id):
-    context = {'id': id}
-    return render(request, 'pages/project.html', context)
 
 
 @redirect_if_not_admin
