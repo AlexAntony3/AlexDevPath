@@ -20,6 +20,6 @@ from portfolio import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.ShowAll, name="home"),
-    path('dashboard-home/', views.dashboard_view, name="dashboard-home"),
-    path('dashboard/', views.dashboard_view, name="dashboard"),
+    path('user/', views.user_view, name="user"),
+    path('user/dashboard', views.dashboard_view, name="dashboard"),
 ]

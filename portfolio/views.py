@@ -3,6 +3,7 @@ from django.views import generic
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseRedirect, HttpResponse
 from .models import Home, About, Skill, Project, Education, Experience, Contact
+from django.contrib.admin.views.decorators import staff_member_required
 
 
 def redirect_if_not_admin(fn):
@@ -47,6 +48,11 @@ def SkillSection(request):
     return render(request, 'pages/skill.html', context)
 
 
-@redirect_if_not_admin
+@staff_member_required
+def user_view(request):
+    return render(request, 'pages/user.html')
+
+
+@staff_member_required
 def dashboard_view(request):
-    return render(request, 'pages/dashboard-home.html')
+    return render(request, 'pages/dashboard.html')
