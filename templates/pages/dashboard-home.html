@@ -1,0 +1,82 @@
+{% extends "dashboard-base.html" %}
+{% block content %}
+
+<div class="spacer">
+    &nbsp;
+</div>
+<div class="container h-100">
+    <div class="row text-center">
+        {% include 'components/home-screen.html' %}
+    </div>
+</div>
+
+
+<div class="container-fluid background-title text-center">
+    <div class="row">
+        <div class="col-12">
+            <h2 class="main-title">Who am I ?</h2>
+        </div>
+    </div>
+</div>
+<div class="container pt-3 pb-4">
+    <div class="row">
+        {% include 'components/about.html' %}
+    </div>
+</div>
+<div class="container pb-5">
+    <div class="row">
+        {% include 'components/skills.html' %}
+        {% for skill in skills %}
+            {{ skill.name }}
+            {% endfor %}
+    </div>
+</div>
+
+<div class="container-fluid background-title text-center">
+    <div class="row">
+        <div class="col-12">
+            <h2 class="main-title">Projects</h2>
+        </div>
+    </div>
+</div>
+<div class="container pt-3 pb-4">
+    <div class="row">
+        <div class="col-sm-12">
+            {% include 'components/projects.html' %}
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid background-title text-center">
+    <div class="row">
+        <div class="col-12">
+            <h2 class="main-title">Resume</h2>
+        </div>
+    </div>
+</div>
+<div class="container-fluid h-100 pt-3 pb-4">
+    <div class="row">
+        <div class="col-sm-6">
+            {% include 'components/education.html' %}
+        </div>
+        <div class="col-sm-6">
+            {% include 'components/experience.html' %}
+        </div>
+    </div>
+</div>
+
+
+<div class="container-fluid background-title text-center">
+    <div class="row">
+        <div class="col-12">
+            <h2 class="main-title">Get in touch!</h2>
+        </div>
+    </div>
+</div>
+<div class="container pt-3 pb-4 text-center">
+    <div class="row pt-5 pb-5">
+        {% include 'components/contact-form.html' %}
+    </div>
+</div>
+
+{% endblock %}

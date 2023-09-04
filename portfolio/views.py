@@ -49,10 +49,4 @@ def SkillSection(request):
 
 @redirect_if_not_admin
 def dashboard_view(request):
-    skills = Skill.objects.all()
-    projects = Project.objects.all()
-    context = {
-        'projects': projects, 'skills': skills
-    }
-
-    return render(request, 'pages/dashboard.html', context)
+    return render(request, 'pages/dashboard-home.html')
