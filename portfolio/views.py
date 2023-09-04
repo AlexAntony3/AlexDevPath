@@ -6,15 +6,6 @@ from .models import Home, About, Skill, Project, Education, Experience, Contact
 from django.contrib.admin.views.decorators import staff_member_required
 
 
-def redirect_if_not_admin(fn):
-    def wrapper(request):
-        if request.user.is_superuser:
-            return fn(request)
-        else:
-            return HttpResponseRedirect('/')
-    return wrapper
-
-
 def HomePage(request):
     return render(request, 'pages/home.html')
 
@@ -35,7 +26,10 @@ def ShowAll(request):
         'projects': projects
         }
 
-    return render(request, 'pages/home.html', context)
+    if request.path == '/user/':
+        return render(request, 'pages/user.html', context)
+    else:
+        return render(request, 'pages/home.html', context)
 
 
 def SkillSection(request):
@@ -51,7 +45,6 @@ def SkillSection(request):
 @staff_member_required
 def user_view(request):
     return render(request, 'pages/user.html')
-
 
 @staff_member_required
 def dashboard_view(request):

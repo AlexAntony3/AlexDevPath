@@ -78,6 +78,10 @@ h5 {
     font-size: 2rem;
 }
 
+.nav-link {
+    color: #fff !important;
+}
+
 .nav-link:hover {
     color: var(--light-yellow) !important;
 }
