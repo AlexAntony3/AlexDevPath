@@ -1,29 +1,31 @@
+{% for abouts in about %}
 <div class="col-md-6 pt-4 pb-4">
-  <img src="/static/media/display-picture.jpg" class="mx-auto d-block img-thumbnail" alt="A picture of me"
+  <img src="{{ abouts.second_image.url }}" class="mx-auto d-block img-thumbnail" alt="A picture of me"
     id="display-picture">
 </div>
 <div class="col-md-6 my-auto justify-content-evenly about-me">
   <h5>
-    Hi, I'm Alex !
+    {{abouts.title}}
   </h5>
   <ul>
     <li>
-      First Name: <span>Alex</span>
+      First Name: <span>{{abouts.first_name}}</span>
     </li>
     <li>
-      Last Name: <span>Antony</span>
+      Last Name: <span>{{abouts.last_name}}</span>
     </li>
     <li>
-      Age: <span>27</span>
+      Age: <span>{{abouts.age}}</span> 
     </li>
     <li>
-      Nationality: <span>British</span>
+      Nationality: <span>{{abouts.nationality}}</span>
     </li>
     <li>
-      Langugages: <span>English & Malayalam</span>
+      Langugages: <span>{{abouts.languages}}</span>
     </li>
     <li>
-      Address: <span>Newcastle Upon-Tyne, UK</span>
+      Address: <span>{{abouts.address}}</span>
     </li>
   </ul>
+  {% endfor %}
 </div>
