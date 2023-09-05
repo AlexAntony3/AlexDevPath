@@ -1,9 +1,10 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.views import generic
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseRedirect, HttpResponse
-from .models import Home, About, Skill, Project, Education, Experience, Contact
 from django.contrib.admin.views.decorators import staff_member_required
+from .models import Home, About, Skill, Project, Education, Experience, Contact
+from .forms import AboutForm, ProjectForm, SkillForm, ExperienceForm, EducationForm
 
 
 def HomePage(request):
@@ -42,3 +43,20 @@ def user_view(request):
 @staff_member_required
 def dashboard_view(request):
     return render(request, 'pages/dashboard.html')
+
+
+def CreateProject(request):
+
+    form = ProjectForm()
+
+    if request.method == 'POST':
+        form = ProjectForm(request.POST)
+        if form.is_valid():
+            project.thumbnail = request.FILES['thumbnail']
+            form.save()
+            return redirect('dashboard')
+        else:
+            print(form.errors)
+
+    context = {'form': form}
+    return render(request, 'pages/create-project.html', context)

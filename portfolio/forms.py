@@ -10,13 +10,14 @@ class AboutForm(forms.ModelForm):
                   'nationality',
                   'languages',
                   'address',
-                  'freelane']
+                  'freelance']
 
 
 class ProjectForm(forms.ModelForm):
     class Meta:
         model = Project
-        fields = ['thumbnail',
+        fields = ['name',
+                  'thumbnail',
                   'skills',
                   'description',
                   'live_url',
@@ -31,7 +32,7 @@ class SkillForm(forms.ModelForm):
                   'icon',]
 
 
-class Experience(forms.ModelForm):
+class ExperienceForm(forms.ModelForm):
     class Meta:
         model = Experience
         fields = ['company',
@@ -39,7 +40,7 @@ class Experience(forms.ModelForm):
                   'description']
 
 
-class Education(forms.ModelForm):
+class EducationForm(forms.ModelForm):
     class Meta:
         model = Education
         fields = ['qualification',
