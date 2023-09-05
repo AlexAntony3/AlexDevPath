@@ -17,13 +17,15 @@ def ShowAll(request):
     experience = Experience.objects.all()
     contact = Contact.objects.all()
     projects = Project.objects.all()
+    skills = Skill.objects.all()
     context = {
         'home': home,
         'about': about,
         'education': education,
         'experience': experience,
         'contact': contact,
-        'projects': projects
+        'projects': projects,
+        'skills': skills
         }
 
     if request.path == '/user/':
@@ -32,19 +34,10 @@ def ShowAll(request):
         return render(request, 'pages/home.html', context)
 
 
-def SkillSection(request):
-    skills = Skill.objects.all()
-    projects = Project.objects.all()
-    context = {
-        'projects': projects, 'skills': skills
-    }
-
-    return render(request, 'pages/skill.html', context)
-
-
 @staff_member_required
 def user_view(request):
     return render(request, 'pages/user.html')
+
 
 @staff_member_required
 def dashboard_view(request):
