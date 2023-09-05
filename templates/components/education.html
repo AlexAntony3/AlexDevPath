@@ -1,59 +1,18 @@
+
 <h2 class="resume-title">Education <i class="fa-solid fa-school"></i></h2>
 <div class="timeline">
     <ul>
+        {% for education in educations %}
         <li>
             <div class="content">
-                <h3>Diploma in Full Stack Development</h3>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
-                    and scrambled it to make a type specimen book. It has survived not only five centuries, but also the
-                    leap into electronic typesetting, remaining essentially unchanged. </p>
+                <h3>{{education.qualification}}</h3>
+                <p>{{education.description}} </p>
             </div>
             <div class="time">
-                <h4>October 2022</h4>
+                <h4>{{education.start_date}}</h4>
             </div>
         </li>
-
-        <li>
-            <div class="content">
-                <h3>Masters in Pharmaceutical Chemistry</h3>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
-                    and scrambled it to make a type specimen book. It has survived not only five centuries, but also the
-                    leap into electronic typesetting, remaining essentially unchanged. </p>
-            </div>
-            <div class="time">
-                <h4>September 2014</h4>
-            </div>
-        </li>
-
-        <li>
-            <div class="content">
-                <h3>3 A-Level in Chemistry, IT and Biology</h3>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
-                    and scrambled it to make a type specimen book. It has survived not only five centuries, but also the
-                    leap into electronic typesetting, remaining essentially unchanged. </p>
-            </div>
-            <div class="time">
-                <h4>September 2012</h4>
-            </div>
-        </li>
-
-        <li>
-            <div class="content">
-                <h3>11 GCSE's</h3>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
-                    and scrambled it to make a type specimen book. It has survived not only five centuries, but also the
-                    leap into electronic typesetting, remaining essentially unchanged. </p>
-            </div>
-            <div class="time">
-                <h4>September 2010</h4>
-            </div>
-        </li>
-
-
+        {% endfor %}
         <div style="clear:both;"></div>
     </ul>
 </div>

@@ -21,8 +21,8 @@ def ShowAll(request):
     context = {
         'home': home,
         'about': about,
-        'education': education,
-        'experience': experience,
+        'educations': education,
+        'experiences': experience,
         'contact': contact,
         'projects': projects,
         'skills': skills
