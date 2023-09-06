@@ -72,8 +72,20 @@ def edit_project(request, pk):
         form = ProjectForm(request.POST, instance=project)
         if form.is_valid():
             form.save()
-            messages.success(request, "Project edited Successfully!")
+            messages.success(request, "Project Edited Successfully!")
             return redirect('dashboard')
 
     context = {'form': form}
     return render(request, 'pages/project-form.html', context)
+
+
+@staff_member_required
+def delete_project(request, pk):
+    project = Project.objects.get(id=pk)
+    if request.method == 'POST':
+        project.delete()
+        messages.success(request, "Project Deleted Successfully!")
+        return redirect('dashboard')
+
+    context = {'project': project}
+    return render(request, 'pages/delete-project.html', context)
