@@ -19,9 +19,9 @@ from portfolio import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.ShowAll, name="home"),
+    path('', views.show_all, name="home"),
     path('user/', views.user_view, name="user"),
     path('user/dashboard/', views.dashboard_view, name="dashboard"),
-    path('create-project/', views.CreateProject, name="create-project"),
-    path('edit-project/<str:pk>/', views.EditProject, name="edit-project"),
+    path('create-project/', views.create_project, name="create-project"),
+    path('edit-project/<str:pk>/', views.edit_project, name="edit-project"),
 ]

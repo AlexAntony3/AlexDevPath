@@ -13,6 +13,17 @@ class AboutForm(forms.ModelForm):
                   'freelance']
 
 
+class CustomMMCF(forms.ModelMultipleChoiceField):
+    """
+    Get custom menu item name labels for checkboxes
+    """
+    def label_from_instance(self, skills):
+        """
+        Returns labels
+        """
+        return str(skills)
+
+
 class ProjectForm(forms.ModelForm):
     class Meta:
         model = Project
@@ -22,6 +33,11 @@ class ProjectForm(forms.ModelForm):
                   'description',
                   'live_url',
                   'github_URL',]
+
+    skills = CustomMMCF(
+            queryset=Skill.objects.all(),
+            widget=forms.CheckboxSelectMultiple()
+        )
 
 
 class SkillForm(forms.ModelForm):
