@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.views import generic
 from django.contrib.auth.decorators import login_required
+from django.contrib import messages
 from django.http import HttpResponseRedirect, HttpResponse
 from django.contrib.admin.views.decorators import staff_member_required
 from .models import Home, About, Skill, Project, Education, Experience, Contact
@@ -54,9 +55,8 @@ def create_project(request):
         form = ProjectForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
-            return redirect('/')
-        else:
-            print(form.errors)
+            messages.success(request, "Project created Successfully!")
+            return redirect('dashboard')
 
     context = {'form': form}
     return render(request, 'pages/project-form.html', context)
