@@ -67,5 +67,13 @@ def edit_project(request, pk):
 
     project = Project.objects.get(id=pk)
     form = ProjectForm(instance=project)
+
+    if request.method == 'POST':
+        form = ProjectForm(request.POST, instance=project)
+        if form.is_valid():
+            form.save()
+            messages.success(request, "Project edited Successfully!")
+            return redirect('dashboard')
+
     context = {'form': form}
     return render(request, 'pages/project-form.html', context)
