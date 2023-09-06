@@ -3,6 +3,9 @@ from django import forms
 
 
 class AboutForm(forms.ModelForm):
+    """
+    
+    """
     class Meta:
         model = About
         fields = ['second_image',
@@ -25,6 +28,9 @@ class CustomMMCF(forms.ModelMultipleChoiceField):
 
 
 class ProjectForm(forms.ModelForm):
+    """
+
+    """
     class Meta:
         model = Project
         fields = ['name',
@@ -41,6 +47,9 @@ class ProjectForm(forms.ModelForm):
 
 
 class SkillForm(forms.ModelForm):
+    """
+    
+    """
     class Meta:
         model = Skill
         fields = ['name',
@@ -49,6 +58,9 @@ class SkillForm(forms.ModelForm):
 
 
 class ExperienceForm(forms.ModelForm):
+    """
+    
+    """
     class Meta:
         model = Experience
         fields = ['company',
@@ -57,6 +69,9 @@ class ExperienceForm(forms.ModelForm):
 
 
 class EducationForm(forms.ModelForm):
+    """
+    
+    """
     class Meta:
         model = Education
         fields = ['qualification',

@@ -4,6 +4,9 @@ from cloudinary.models import CloudinaryField
 
 
 class Home(models.Model):
+    """
+    
+    """
     title = models.CharField(max_length=200, blank=True)
     main_image = CloudinaryField('image')
     name_header = models.CharField(max_length=100)
@@ -14,6 +17,9 @@ class Home(models.Model):
 
 
 class About(models.Model):
+    """
+    
+    """
     title = models.CharField(max_length=50, blank=True)
     second_image = CloudinaryField('image')
     first_name = models.CharField(max_length=80, unique=True)
@@ -29,6 +35,9 @@ class About(models.Model):
 
 
 class Project(models.Model):
+    """
+    
+    """
     name = models.CharField(max_length=100, unique=True)
     thumbnail = CloudinaryField('image')
     skills = models.ManyToManyField('Skill')
@@ -41,6 +50,9 @@ class Project(models.Model):
 
 
 class Skill(models.Model):
+    """
+    
+    """
     name = models.CharField(max_length=100)
     proficiency = models.IntegerField()
     icon = CloudinaryField('image')
@@ -50,6 +62,9 @@ class Skill(models.Model):
 
 
 class Experience(models.Model):
+    """
+    
+    """
     role = models.CharField(max_length=200)
     company = models.CharField(max_length=300)
     start_date = models.DateField()
@@ -61,6 +76,9 @@ class Experience(models.Model):
 
 
 class Education(models.Model):
+    """
+    
+    """
     institute = models.CharField(max_length=200)
     qualification = models.CharField(max_length=200)
     start_date = models.DateField()
@@ -72,6 +90,9 @@ class Education(models.Model):
 
 
 class Contact(models.Model):
+    """
+    
+    """
     full_name = models.CharField(max_length=200)
     number = models.CharField(max_length=16)
     email = models.EmailField()

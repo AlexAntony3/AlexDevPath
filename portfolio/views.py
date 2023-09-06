@@ -7,11 +7,10 @@ from .models import Home, About, Skill, Project, Education, Experience, Contact
 from .forms import AboutForm, ProjectForm, SkillForm, ExperienceForm, EducationForm
 
 
-def home_page(request):
-    return render(request, 'pages/home.html')
-
-
 def show_all(request):
+    """
+    
+    """
     home = Home.objects.all()
     about = About.objects.all()
     education = Education.objects.all()
@@ -46,6 +45,7 @@ def dashboard_view(request):
     return render(request, 'pages/dashboard.html', {'projects': projects})
 
 
+@staff_member_required
 def create_project(request):
 
     form = ProjectForm()
@@ -62,6 +62,7 @@ def create_project(request):
     return render(request, 'pages/project-form.html', context)
 
 
+@staff_member_required
 def edit_project(request, pk):
 
     project = Project.objects.get(id=pk)
