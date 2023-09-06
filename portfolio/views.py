@@ -50,9 +50,8 @@ def CreateProject(request):
     form = ProjectForm()
 
     if request.method == 'POST':
-        form = ProjectForm(request.POST)
+        form = ProjectForm(request.POST, request.FILES)
         if form.is_valid():
-            project.thumbnail = request.FILES['thumbnail']
             form.save()
             return redirect('dashboard')
         else:
