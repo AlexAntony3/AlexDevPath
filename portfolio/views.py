@@ -58,4 +58,12 @@ def CreateProject(request):
             print(form.errors)
 
     context = {'form': form}
-    return render(request, 'pages/create-project.html', context)
+    return render(request, 'pages/project-form.html', context)
+
+
+def EditProject(request, pk):
+
+    project = Project.objects.get(id=pk)
+    form = ProjectForm(instance=project)
+    context = {'form': form}
+    return render(request, 'pages/project-form.html', context)

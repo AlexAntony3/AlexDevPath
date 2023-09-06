@@ -22,5 +22,6 @@ urlpatterns = [
     path('', views.ShowAll, name="home"),
     path('user/', views.user_view, name="user"),
     path('user/dashboard/', views.dashboard_view, name="dashboard"),
-    path('create-project/', views.CreateProject, name="create-project")
+    path('create-project/', views.CreateProject, name="create-project"),
+    path('edit-project/<str:pk>/', views.EditProject, name="edit-project"),
 ]
