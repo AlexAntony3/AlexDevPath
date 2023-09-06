@@ -4,7 +4,7 @@ from django import forms
 
 class AboutForm(forms.ModelForm):
     """
-    
+    Interaction required for the user to update/enter 'about me' details
     """
     class Meta:
         model = About
@@ -18,7 +18,7 @@ class AboutForm(forms.ModelForm):
 
 class CustomMMCF(forms.ModelMultipleChoiceField):
     """
-    Get custom menu item name labels for checkboxes
+    Get unrestricted user entered skill name labels for checkboxes
     """
     def label_from_instance(self, skills):
         """
@@ -29,7 +29,9 @@ class CustomMMCF(forms.ModelMultipleChoiceField):
 
 class ProjectForm(forms.ModelForm):
     """
-
+    The required fields required for CRUD functionality for the project
+    This also incorporates the CustomMMCF function to allow the user to
+    pick more than one skill per project
     """
     class Meta:
         model = Project
@@ -48,7 +50,7 @@ class ProjectForm(forms.ModelForm):
 
 class SkillForm(forms.ModelForm):
     """
-    
+    Allows the user to have CRUD functionality of skills
     """
     class Meta:
         model = Skill
@@ -59,7 +61,7 @@ class SkillForm(forms.ModelForm):
 
 class ExperienceForm(forms.ModelForm):
     """
-    
+    Allows the user to have CRUD functionality of work history
     """
     class Meta:
         model = Experience
@@ -70,7 +72,7 @@ class ExperienceForm(forms.ModelForm):
 
 class EducationForm(forms.ModelForm):
     """
-    
+    Allows the user to have CRUD functionality of education history
     """
     class Meta:
         model = Education

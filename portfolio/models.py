@@ -5,7 +5,7 @@ from cloudinary.models import CloudinaryField
 
 class Home(models.Model):
     """
-    
+    Defines the fields required in the home model.
     """
     title = models.CharField(max_length=200, blank=True)
     main_image = CloudinaryField('image')
@@ -13,12 +13,15 @@ class Home(models.Model):
     intro_description = models.TextField()
 
     def __str__(self):
+        """
+        returns a string response with the title for the admin
+        """
         return self.title
 
 
 class About(models.Model):
     """
-    
+    Defines the about model with numerous fields
     """
     title = models.CharField(max_length=50, blank=True)
     second_image = CloudinaryField('image')
@@ -31,12 +34,17 @@ class About(models.Model):
     freelance = models.BooleanField(default=False)
 
     def __str__(self):
+        """
+        returns a string response with the title 
+        in the about section for the admin
+        """
         return self.title
 
 
 class Project(models.Model):
     """
-    
+    defines the project model which will exhibit
+    all projects and skills utilised.
     """
     name = models.CharField(max_length=100, unique=True)
     thumbnail = CloudinaryField('image')
@@ -46,24 +54,30 @@ class Project(models.Model):
     github_URL = models.URLField()
 
     def __str__(self):
+        """
+        returns a string response with the name of the project to the admin
+        """
         return self.name
 
 
 class Skill(models.Model):
     """
-    
+    defines the skill model which will exhibit proficiency in the skill
     """
     name = models.CharField(max_length=100)
     proficiency = models.IntegerField()
     icon = CloudinaryField('image')
 
     def __str__(self):
+        """
+        returns a string response with the name of the skill to the admin
+        """
         return self.name
 
 
 class Experience(models.Model):
     """
-    
+    defines the experience model from which the work history can be presented
     """
     role = models.CharField(max_length=200)
     company = models.CharField(max_length=300)
@@ -72,12 +86,16 @@ class Experience(models.Model):
     description = models.TextField()
 
     def __str__(self):
+        """
+        returns a string response with the role and company to the admin
+        """
         return f'{self.role} at {self.company}'
 
 
 class Education(models.Model):
     """
-    
+    defines the education model from which 
+    the education history can be presented
     """
     institute = models.CharField(max_length=200)
     qualification = models.CharField(max_length=200)
@@ -86,12 +104,16 @@ class Education(models.Model):
     description = models.TextField(null=True, blank=True)
 
     def __str__(self):
+        """
+        returns a string response with the qualification
+        and insitute to the admin
+        """
         return f'{self.qualification} from {self.institute}'
 
 
 class Contact(models.Model):
     """
-    
+    defines the contact model in which a user can make contact with the admin
     """
     full_name = models.CharField(max_length=200)
     number = models.CharField(max_length=16)
@@ -99,4 +121,7 @@ class Contact(models.Model):
     message = models.TextField()
 
     def __str__(self):
+        """
+        returns a string with a brief summary of the sender name and message
+        """
         return f'{self.full_name} sent a message stating {self.message}'

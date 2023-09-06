@@ -10,7 +10,7 @@ from .forms import AboutForm, ProjectForm, SkillForm, ExperienceForm, EducationF
 
 def show_all(request):
     """
-    
+    Handles all the request from all models
     """
     home = Home.objects.all()
     about = About.objects.all()
@@ -37,20 +37,27 @@ def show_all(request):
 
 @staff_member_required
 def user_view(request):
+    """
+    Initial view for the restricted admin/staff access
+    """
     return render(request, 'pages/user.html')
 
 
 @staff_member_required
 def dashboard_view(request):
+    """
+    Dashboard view for the for admin/staff to access restricted CRUD material
+    """
     projects = Project.objects.all()
     return render(request, 'pages/dashboard.html', {'projects': projects})
 
 
 @staff_member_required
 def create_project(request):
-
+    """
+    Functionality for unrestricted users to create projects
+    """
     form = ProjectForm()
-
     if request.method == 'POST':
         form = ProjectForm(request.POST, request.FILES)
         if form.is_valid():
@@ -64,7 +71,9 @@ def create_project(request):
 
 @staff_member_required
 def edit_project(request, pk):
-
+    """
+    Functionality for unrestricted users to edit projects
+    """
     project = Project.objects.get(id=pk)
     form = ProjectForm(instance=project)
 
@@ -81,6 +90,9 @@ def edit_project(request, pk):
 
 @staff_member_required
 def delete_project(request, pk):
+    """
+    Functionality for unrestricted users to delete projects
+    """
     project = Project.objects.get(id=pk)
     if request.method == 'POST':
         project.delete()
