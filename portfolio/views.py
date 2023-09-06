@@ -5,7 +5,12 @@ from django.contrib import messages
 from django.http import HttpResponseRedirect, HttpResponse
 from django.contrib.admin.views.decorators import staff_member_required
 from .models import Home, About, Skill, Project, Education, Experience, Contact
-from .forms import AboutForm, ProjectForm, SkillForm, ExperienceForm, EducationForm
+from .forms import (AboutForm,
+                    ProjectForm,
+                    SkillForm,
+                    ExperienceForm,
+                    EducationForm
+                    )
 
 
 def show_all(request):
