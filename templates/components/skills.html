@@ -3,7 +3,7 @@
     <div class="progress-section" data-aos="fade-left" data-aos-once="true">
         <div class="task-progress">
             {% for skill in skills %}
-            <p class="pt-2 pb-1"><i class="devicon-html5-plain"></i>
+                <p class="pt-2 pb-1"><i class="devicon-{{skill.icon}}-plain"></i>
                 {{skill.name}}
                 <span>{{skill.proficiency}}%</span>
             </p>
