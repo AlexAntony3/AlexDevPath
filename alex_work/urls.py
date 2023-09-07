@@ -30,4 +30,5 @@ urlpatterns = [
     path('edit-about/<str:pk>/', views.edit_about, name="edit-about"),
     path('add-education/', views.add_education, name="add-education"),
     path('edit-education/<str:pk>/', views.edit_education, name="edit-education"),
+    path('delete-education/<str:pk>/', views.delete_education, name="delete-education"),
 ]

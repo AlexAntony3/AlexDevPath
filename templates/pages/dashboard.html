@@ -96,7 +96,7 @@
                     <div class="d-flex justify-content-around">
                         <p>{{education.qualification}}</p>
                         <a href="{% url 'edit-education' education.id %}" class="btn btn-primary pl-3" style="font-size: 1.25rem;">Edit</a>
-                        <a href="#" class="btn btn-danger pl-3" style="font-size: 1.25rem;">Delete</a>
+                        <a href="{% url 'delete-education' education.id %}" class="btn btn-danger pl-3" style="font-size: 1.25rem;">Delete</a>
                     </div>
                     {% endfor %}
                 </div>

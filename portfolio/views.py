@@ -34,10 +34,7 @@ def show_all(request):
         'skills': skills
         }
 
-    if request.path == '/user/':
-        return render(request, 'pages/user.html', context)
-    else:
-        return render(request, 'pages/home.html', context)
+    return render(request, 'pages/home.html', context)
 
 
 @staff_member_required
@@ -213,3 +210,18 @@ def delete_skill(request, pk):
 
     context = {'skill': skill}
     return render(request, 'pages/delete-skill.html', context)
+
+
+@staff_member_required
+def delete_education(request, pk):
+    """
+    Functionality for unrestricted users to delete skils
+    """
+    education = Education.objects.get(id=pk)
+    if request.method == 'POST':
+        education.delete()
+        messages.success(request, "Education Deleted Successfully!")
+        return redirect('dashboard')
+
+    context = {'education': education}
+    return render(request, 'pages/delete-education.html', context)
