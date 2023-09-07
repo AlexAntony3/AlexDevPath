@@ -31,7 +31,6 @@ class About(models.Model):
     nationality = models.CharField(max_length=200)
     languages = models.CharField(max_length=200)
     address = models.CharField(max_length=400, unique=True)
-    freelance = models.BooleanField(default=False)
 
     def __str__(self):
         """
@@ -65,8 +64,8 @@ class Skill(models.Model):
     defines the skill model which will exhibit proficiency in the skill
     """
     name = models.CharField(max_length=100)
-    proficiency = models.CharField(max_length=100)
-    icon = CloudinaryField('image')
+    proficiency = models.IntegerField()
+    icon = models.CharField(max_length=100)
 
     def __str__(self):
         """
@@ -82,7 +81,6 @@ class Experience(models.Model):
     role = models.CharField(max_length=200)
     company = models.CharField(max_length=300)
     start_date = models.DateField()
-    end_date = models.DateField()
     description = models.TextField()
 
     def __str__(self):
@@ -100,7 +98,6 @@ class Education(models.Model):
     institute = models.CharField(max_length=200)
     qualification = models.CharField(max_length=200)
     start_date = models.DateField()
-    end_date = models.DateField()
     description = models.TextField(null=True, blank=True)
 
     def __str__(self):

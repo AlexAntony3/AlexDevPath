@@ -12,8 +12,7 @@ class AboutForm(forms.ModelForm):
                   'age',
                   'nationality',
                   'languages',
-                  'address',
-                  'freelance']
+                  'address']
 
 
 class CustomMMCF(forms.ModelMultipleChoiceField):
@@ -68,7 +67,6 @@ class ExperienceForm(forms.ModelForm):
         fields = ['company',
                   'role',
                   'start_date',
-                  'end_date',
                   'description']
 
 
@@ -81,5 +79,4 @@ class EducationForm(forms.ModelForm):
         fields = ['qualification',
                   'institute',
                   'start_date',
-                  'end_date',
                   'description']
