@@ -139,6 +139,25 @@ def edit_skill(request, pk):
 
 
 @staff_member_required
+def edit_about(request, pk):
+    """
+    Functionality for unrestricted users to edit skills
+    """
+    about = About.objects.get(id=pk)
+    form = AboutForm(instance=about)
+
+    if request.method == 'POST':
+        form = AboutForm(request.POST, instance=about)
+        if form.is_valid():
+            form.save()
+            messages.success(request, "About Edited Successfully!")
+            return redirect('dashboard')
+
+    context = {'form': form}
+    return render(request, 'pages/about-form.html', context)
+
+
+@staff_member_required
 def delete_project(request, pk):
     """
     Functionality for unrestricted users to delete projects

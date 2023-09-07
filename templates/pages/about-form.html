@@ -1,0 +1,21 @@
+{% extends "dashboard-base.html" %}
+{% block content %}
+<div class="spacer">
+    &nbsp;
+</div>
+<div class="container-fluid background-title text-center">
+    <div class="row">
+        <div class="col-12">
+            <h2 class="main-title">About</h2>
+        </div>
+    </div>
+</div>
+
+<form action="" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{form}}
+    <input type="submit", name="Submit">
+</form>
+
+
+{% endblock %}

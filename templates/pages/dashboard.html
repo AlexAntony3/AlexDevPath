@@ -27,7 +27,9 @@
                     <p class="card-text" style="font-size: 2rem;">Some quick example text to build on the card title
                         and make up the bulk of the
                         card's content.</p>
-                    <a href="#" class="btn btn-primary" style="font-size: 1.25rem;">Edit</a>
+                    {% for data in about %}
+                    <a href="{% url 'edit-about' data.id %}" class="btn btn-primary" style="font-size: 1.25rem;">Edit</a>
+                    {% endfor %}
                 </div>
             </div>
         </div>
