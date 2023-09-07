@@ -61,8 +61,8 @@ def dashboard_view(request):
     return render(request, 'pages/dashboard.html', {'projects': projects,
                                                     'skills': skills,
                                                     'about': about,
-                                                    #'education': edcuation,
-                                                    #'experience': experience
+                                                    'item': education,
+                                                    #'experiences': experience
                                                     })
 
 
@@ -98,6 +98,23 @@ def create_skill(request):
 
     context = {'form': form}
     return render(request, 'pages/skill-form.html', context)
+
+
+@staff_member_required
+def add_education(request):
+    """
+    Functionality for unrestricted users to create projects
+    """
+    form = EducationForm()
+    if request.method == 'POST':
+        form = EducationForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            messages.success(request, "Education added Successfully!")
+            return redirect('dashboard')
+
+    context = {'form': form}
+    return render(request, 'pages/education-form.html', context)
 
 
 @staff_member_required

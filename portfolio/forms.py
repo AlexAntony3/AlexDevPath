@@ -77,5 +77,7 @@ class EducationForm(forms.ModelForm):
     class Meta:
         model = Education
         fields = ['qualification',
+                  'institute',
                   'start_date',
+                  'end_date',
                   'description']
