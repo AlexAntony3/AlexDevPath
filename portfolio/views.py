@@ -60,7 +60,7 @@ def dashboard_view(request):
     experience = Experience.objects.all()
     return render(request, 'pages/dashboard.html', {'projects': projects,
                                                     'skills': skills,
-                                                    #'about': about,
+                                                    'about': about,
                                                     #'education': edcuation,
                                                     #'experience': experience
                                                     })
@@ -151,3 +151,18 @@ def delete_project(request, pk):
 
     context = {'project': project}
     return render(request, 'pages/delete-project.html', context)
+
+
+@staff_member_required
+def delete_skill(request, pk):
+    """
+    Functionality for unrestricted users to delete skils
+    """
+    skill = Skill.objects.get(id=pk)
+    if request.method == 'POST':
+        skill.delete()
+        messages.success(request, "Skill Deleted Successfully!")
+        return redirect('dashboard')
+
+    context = {'skill': skill}
+    return render(request, 'pages/delete-skill.html', context)

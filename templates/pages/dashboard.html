@@ -46,7 +46,7 @@
                         <p>{{skill.name}}</p>
                         <a href="{% url 'edit-skill' skill.id %}" class="btn btn-primary pl-3"
                             style="font-size: 1.25rem;">Edit</a>
-                        <a href="#" class="btn btn-danger pl-3"
+                        <a href="{% url 'delete-skill' skill.id %}" class="btn btn-danger pl-3"
                             style="font-size: 1.25rem;">Delete</a>
                     </div>
                     {% endfor %}

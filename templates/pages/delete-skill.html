@@ -1,0 +1,17 @@
+{% extends "dashboard-base.html" %}
+{% block content %}
+<div class="spacer">
+    &nbsp;
+</div>
+
+<p>Are you sure you want to delete "{{skill}}"</p>
+
+<form action="" method="POST">
+    {% csrf_token %}
+    <a href="{% url 'dashboard' %}">Cancel</a>
+
+    <input type="submit" name="Delete">
+
+</form>
+
+{% endblock %}
