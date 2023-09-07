@@ -41,14 +41,6 @@ def show_all(request):
 
 
 @staff_member_required
-def user_view(request):
-    """
-    Initial view for the restricted admin/staff access
-    """
-    return render(request, 'pages/user.html')
-
-
-@staff_member_required
 def dashboard_view(request):
     """
     Dashboard view for the for admin/staff to access restricted CRUD material
@@ -56,12 +48,12 @@ def dashboard_view(request):
     projects = Project.objects.all()
     skills = Skill.objects.all()
     about = About.objects.all()
-    education = Education.objects.all()
-    experience = Experience.objects.all()
+    educations = Education.objects.all()
+    experiences = Experience.objects.all()
     return render(request, 'pages/dashboard.html', {'projects': projects,
                                                     'skills': skills,
                                                     'about': about,
-                                                    'item': education,
+                                                    'educations': educations,
                                                     #'experiences': experience
                                                     })
 
@@ -153,6 +145,25 @@ def edit_skill(request, pk):
 
     context = {'form': form}
     return render(request, 'pages/skill-form.html', context)
+
+
+@staff_member_required
+def edit_education(request, pk):
+    """
+    Functionality for unrestricted users to edit skills
+    """
+    education = Education.objects.get(id=pk)
+    form = EducationForm(instance=education)
+
+    if request.method == 'POST':
+        form = EducationForm(request.POST, instance=education)
+        if form.is_valid():
+            form.save()
+            messages.success(request, "Education Edited Successfully!")
+            return redirect('dashboard')
+
+    context = {'form': form}
+    return render(request, 'pages/education-form.html', context)
 
 
 @staff_member_required

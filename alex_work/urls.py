@@ -20,8 +20,7 @@ from portfolio import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.show_all, name="home"),
-    path('user/', views.user_view, name="user"),
-    path('user/dashboard/', views.dashboard_view, name="dashboard"),
+    path('dashboard/', views.dashboard_view, name="dashboard"),
     path('create-project/', views.create_project, name="create-project"),
     path('edit-project/<str:pk>/', views.edit_project, name="edit-project"),
     path('delete-project/<str:pk>/', views.delete_project, name="delete-project"),
@@ -30,4 +29,5 @@ urlpatterns = [
     path('delete-skill/<str:pk>/', views.delete_skill, name="delete-skill"),
     path('edit-about/<str:pk>/', views.edit_about, name="edit-about"),
     path('add-education/', views.add_education, name="add-education"),
+    path('edit-education/<str:pk>/', views.edit_education, name="edit-education"),
 ]

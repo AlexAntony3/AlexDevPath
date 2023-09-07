@@ -65,7 +65,7 @@ class Skill(models.Model):
     defines the skill model which will exhibit proficiency in the skill
     """
     name = models.CharField(max_length=100)
-    proficiency = models.IntegerField()
+    proficiency = models.CharField(max_length=100)
     icon = CloudinaryField('image')
 
     def __str__(self):

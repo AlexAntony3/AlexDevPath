@@ -1,0 +1,64 @@
+[{
+    "model": "portfolio.about",
+    "pk": 1,
+    "fields": {
+        "title": "Hello ! I'm Alex",
+        "second_image": "image/upload/v1694104083/w5hs6i0hqwuhbjrb2r3b.jpg",
+        "first_name": "Alex",
+        "last_name": "Antony",
+        "age": 40,
+        "nationality": "Indian British",
+        "languages": "English & Malayalam",
+        "address": "Newcastle Upon-Tyne, UK",
+        "freelance": false
+    }
+}, {
+    "model": "portfolio.project",
+    "pk": 14,
+    "fields": {
+        "name": "Executioner",
+        "thumbnail": "image/upload/v1694033403/aona8znjtdqom5ladrl3.png",
+        "description": "executive folder",
+        "live_url": "https://github.com/AlexAntony3/executioner",
+        "github_URL": "https://executioner.herokuapp.com/",
+        "skills": []
+    }
+}, {
+    "model": "portfolio.skill",
+    "pk": 1,
+    "fields": {
+        "name": "HTML",
+        "proficiency": "40",
+        "icon": "image/upload/v1694023719/qlvsxdbupero6hbjjxzq.png"
+    }
+}, {
+    "model": "portfolio.education",
+    "pk": 1,
+    "fields": {
+        "institute": "Code Institute",
+        "qualification": "Diploma in Full Stack Development",
+        "start_date": "2014-09-01",
+        "end_date": "2023-09-05",
+        "description": "This is a test"
+    }
+}, {
+    "model": "portfolio.education",
+    "pk": 2,
+    "fields": {
+        "institute": "Code Institute",
+        "qualification": "Diploma in Full Stack Development",
+        "start_date": "2014-09-01",
+        "end_date": "2023-09-08",
+        "description": "sadasdas"
+    }
+}, {
+    "model": "portfolio.education",
+    "pk": 3,
+    "fields": {
+        "institute": "Manchester Metropolitan University",
+        "qualification": "Mchem (hons) Pharmaceutical Chemistry",
+        "start_date": "2022-10-31",
+        "end_date": "2023-09-05",
+        "description": "asdasdasd"
+    }
+}]

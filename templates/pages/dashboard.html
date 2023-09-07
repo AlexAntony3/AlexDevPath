@@ -1,4 +1,4 @@
-{% extends "dashboard-base.html" %}
+{% extends "base.html" %}
 {% block content %}
 <div class="spacer">
     &nbsp;
@@ -92,10 +92,10 @@
                         card's content.</p>
                     <a href="{% url 'add-education' %}" class="btn btn-success pl-3"
                         style="font-size: 1.25rem;">Create</a>
-                    {% for item in education %}
+                    {% for education in educations %}
                     <div class="d-flex justify-content-around">
-                        <p>{{item.qualification}}</p>
-                        <a href="#" class="btn btn-primary pl-3" style="font-size: 1.25rem;">Edit</a>
+                        <p>{{education.qualification}}</p>
+                        <a href="{% url 'edit-education' education.id %}" class="btn btn-primary pl-3" style="font-size: 1.25rem;">Edit</a>
                         <a href="#" class="btn btn-danger pl-3" style="font-size: 1.25rem;">Delete</a>
                     </div>
                     {% endfor %}
