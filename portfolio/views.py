@@ -51,7 +51,7 @@ def dashboard_view(request):
                                                     'skills': skills,
                                                     'about': about,
                                                     'educations': educations,
-                                                    #'experiences': experience
+                                                    'experiences': experiences,
                                                     })
 
 
@@ -106,6 +106,22 @@ def add_education(request):
     return render(request, 'pages/education-form.html', context)
 
 
+def add_experience(request):
+    """
+    Functionality for unrestricted users to create projects
+    """
+    form = ExperienceForm()
+    if request.method == 'POST':
+        form = ExperienceForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            messages.success(request, "Experience added Successfully!")
+            return redirect('dashboard')
+
+    context = {'form': form}
+    return render(request, 'pages/experience-form.html', context)
+
+
 @staff_member_required
 def edit_project(request, pk):
     """
@@ -145,6 +161,25 @@ def edit_skill(request, pk):
 
 
 @staff_member_required
+def edit_about(request, pk):
+    """
+    Functionality for unrestricted users to edit skills
+    """
+    about = About.objects.get(id=pk)
+    form = AboutForm(instance=about)
+
+    if request.method == 'POST':
+        form = AboutForm(request.POST, instance=about)
+        if form.is_valid():
+            form.save()
+            messages.success(request, "About Edited Successfully!")
+            return redirect('dashboard')
+
+    context = {'form': form}
+    return render(request, 'pages/about-form.html', context)
+
+
+@staff_member_required
 def edit_education(request, pk):
     """
     Functionality for unrestricted users to edit skills
@@ -164,22 +199,22 @@ def edit_education(request, pk):
 
 
 @staff_member_required
-def edit_about(request, pk):
+def edit_experience(request, pk):
     """
     Functionality for unrestricted users to edit skills
     """
-    about = About.objects.get(id=pk)
-    form = AboutForm(instance=about)
+    experience = Experience.objects.get(id=pk)
+    form = ExperienceForm(instance=experience)
 
     if request.method == 'POST':
-        form = AboutForm(request.POST, instance=about)
+        form = ExperienceForm(request.POST, instance=experience)
         if form.is_valid():
             form.save()
-            messages.success(request, "About Edited Successfully!")
+            messages.success(request, "Experience Edited Successfully!")
             return redirect('dashboard')
 
     context = {'form': form}
-    return render(request, 'pages/about-form.html', context)
+    return render(request, 'pages/experience-form.html', context)
 
 
 @staff_member_required
@@ -225,3 +260,18 @@ def delete_education(request, pk):
 
     context = {'education': education}
     return render(request, 'pages/delete-education.html', context)
+
+
+@staff_member_required
+def delete_experience(request, pk):
+    """
+    Functionality for unrestricted users to delete skils
+    """
+    experience = Experience.objects.get(id=pk)
+    if request.method == 'POST':
+        experience.delete()
+        messages.success(request, "Experience Deleted Successfully!")
+        return redirect('dashboard')
+
+    context = {'experience': experience}
+    return render(request, 'pages/delete-experience.html', context)

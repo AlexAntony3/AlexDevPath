@@ -31,4 +31,7 @@ urlpatterns = [
     path('add-education/', views.add_education, name="add-education"),
     path('edit-education/<str:pk>/', views.edit_education, name="edit-education"),
     path('delete-education/<str:pk>/', views.delete_education, name="delete-education"),
+    path('add-experience/', views.add_experience, name="add-experience"),
+    path('edit-experience/<str:pk>/', views.edit_experience, name="edit-experience"),
+    path('delete-experience/<str:pk>/', views.delete_experience, name="delete-experience"),
 ]

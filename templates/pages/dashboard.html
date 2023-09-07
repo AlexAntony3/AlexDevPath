@@ -95,8 +95,10 @@
                     {% for education in educations %}
                     <div class="d-flex justify-content-around">
                         <p>{{education.qualification}}</p>
-                        <a href="{% url 'edit-education' education.id %}" class="btn btn-primary pl-3" style="font-size: 1.25rem;">Edit</a>
-                        <a href="{% url 'delete-education' education.id %}" class="btn btn-danger pl-3" style="font-size: 1.25rem;">Delete</a>
+                        <a href="{% url 'edit-education' education.id %}" class="btn btn-primary pl-3"
+                            style="font-size: 1.25rem;">Edit</a>
+                        <a href="{% url 'delete-education' education.id %}" class="btn btn-danger pl-3"
+                            style="font-size: 1.25rem;">Delete</a>
                     </div>
                     {% endfor %}
                 </div>
@@ -114,16 +116,20 @@
                     <p class="card-text" style="font-size: 2rem;">Some quick example text to build on the card title
                         and make up the bulk of the
                         card's content.</p>
+                    <a href="{% url 'add-experience' %}" class="btn btn-success pl-3"
+                        style="font-size: 1.25rem;">Create</a>
+                    {% for experience in experiences %}
                     <div class="d-flex justify-content-around">
-                        <a href="#" class="btn btn-primary pl-3" style="font-size: 1.25rem;">Edit</a>
-                        <a href="#" class="btn btn-success pl-3" style="font-size: 1.25rem;">Create</a>
-                        <a href="#" class="btn btn-danger pl-3" style="font-size: 1.25rem;">Delete</a>
+                        <p>{{experience.role}}</p>
+                        <a href="{% url 'edit-experience' experience.id %}" class="btn btn-primary pl-3"
+                            style="font-size: 1.25rem;">Edit</a>
+                        <a href="{% url 'delete-experience' experience.id %}" class="btn btn-danger pl-3"
+                            style="font-size: 1.25rem;">Delete</a>
                     </div>
+                    {% endfor %}
                 </div>
             </div>
         </div>
     </div>
 </div>
-
-
 {% endblock %}

@@ -66,7 +66,9 @@ class ExperienceForm(forms.ModelForm):
     class Meta:
         model = Experience
         fields = ['company',
+                  'role',
                   'start_date',
+                  'end_date',
                   'description']
 
 
