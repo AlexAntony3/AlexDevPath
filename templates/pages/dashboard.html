@@ -24,35 +24,40 @@
                 <img class="card-img-top" src="..." alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title" style="font-size: 2.5rem;">About</h5>
-                    <p class="card-text" style="font-size: 2rem;">Some quick example text to build on the card title
-                        and make up the bulk of the
-                        card's content.</p>
                     {% for data in about %}
-                    <a href="{% url 'edit-about' data.id %}" class="btn btn-primary"
-                        style="font-size: 1.25rem;">Edit</a>
+                    <a href="{% url 'edit-about' data.id %}" class="btn btn-info pl-3"
+                        style="font-size: 1.5rem;">Edit</a>
                     {% endfor %}
                 </div>
             </div>
         </div>
         <div class="col-md-6 mb-4 mb-md-0 d-flex justify-content-around">
-            <div class="card bg-dark text-white text-center" style="width: 45rem; height: 45rem;">
+            <div class="card bg-dark text-white text-center rounded" style="width: 45rem; height: 45rem;">
                 <img class="card-img-top" src="..." alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title" style="font-size: 2.5rem;">Skills</h5>
-                    <p class="card-text" style="font-size: 2rem;">Some quick example text to build on the card title
-                        and make up the bulk of the
-                        card's content.</p>
                     <a href="{% url 'create-skill' %}" class="btn btn-success pl-3"
-                        style="font-size: 1.25rem;">Create</a>
-                    {% for skill in skills %}
-                    <div class="d-flex justify-content-around">
-                        <p>{{skill.name}}</p>
-                        <a href="{% url 'edit-skill' skill.id %}" class="btn btn-primary pl-3"
-                            style="font-size: 1.25rem;">Edit</a>
-                        <a href="{% url 'delete-skill' skill.id %}" class="btn btn-danger pl-3"
-                            style="font-size: 1.25rem;">Delete</a>
-                    </div>
-                    {% endfor %}
+                        style="font-size: 1.5rem;">Create</a>
+                    <table class="table table-dark table-sm table-hover" style="font-size: 1.5rem;">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for skill in skills %}
+                            <tr>
+                                <td>{{skill.name}}</td>
+                                <td>
+                                    <a class="btn btn-outline-info" href="{% url 'edit-skill' skill.id %}">Edit</a>
+                                    <a class="btn btn-outline-danger"
+                                        href="{% url 'delete-skill' skill.id %}">Delete</a>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
@@ -65,20 +70,28 @@
                 <img class="card-img-top" src="..." alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title" style="font-size: 2.5rem;">Projects</h5>
-                    <p class="card-text" style="font-size: 2rem;">Some quick example text to build on the card title
-                        and make up the bulk of the
-                        card's content.</p>
                     <a href="{% url 'create-project' %}" class="btn btn-success pl-3"
-                        style="font-size: 1.25rem;">Create</a>
-                    {% for project in projects %}
-                    <div class="d-flex justify-content-around">
-                        <p>{{project.name}}</p>
-                        <a href="{% url 'edit-project' project.id %}" class="btn btn-primary pl-3"
-                            style="font-size: 1.25rem;">Edit</a>
-                        <a href="{% url 'delete-project' project.id %}" class="btn btn-danger pl-3"
-                            style="font-size: 1.25rem;">Delete</a>
-                    </div>
-                    {% endfor %}
+                        style="font-size: 1.5rem;">Create</a>
+                    <table class="table table-dark table-sm table-hover" style="font-size: 1.5rem;">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for project in projects %}
+                            <tr>
+                                <td>{{project.name}}</td>
+                                <td>
+                                    <a class="btn btn-outline-info" href="{% url 'edit-project' project.id %}">Edit</a>
+                                    <a class="btn btn-outline-danger"
+                                        href="{% url 'delete-project' project.id %}">Delete</a>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
@@ -87,20 +100,29 @@
                 <img class="card-img-top" src="..." alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title" style="font-size: 2.5rem;">Education</h5>
-                    <p class="card-text" style="font-size: 2rem;">Some quick example text to build on the card title
-                        and make up the bulk of the
-                        card's content.</p>
                     <a href="{% url 'add-education' %}" class="btn btn-success pl-3"
-                        style="font-size: 1.25rem;">Create</a>
-                    {% for education in educations %}
-                    <div class="d-flex justify-content-around">
-                        <p>{{education.qualification}}</p>
-                        <a href="{% url 'edit-education' education.id %}" class="btn btn-primary pl-3"
-                            style="font-size: 1.25rem;">Edit</a>
-                        <a href="{% url 'delete-education' education.id %}" class="btn btn-danger pl-3"
-                            style="font-size: 1.25rem;">Delete</a>
-                    </div>
-                    {% endfor %}
+                        style="font-size: 1.5rem;">Create</a>
+                    <table class="table table-dark table-sm table-hover" style="font-size: 1.5rem;">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for education in educations %}
+                            <tr>
+                                <td>{{education.institute}}</td>
+                                <td>
+                                    <a class="btn btn-outline-info"
+                                        href="{% url 'edit-education' education.id %}">Edit</a>
+                                    <a class="btn btn-outline-danger"
+                                        href="{% url 'delete-education' education.id %}">Delete</a>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
@@ -113,20 +135,29 @@
                 <img class="card-img-top" src="..." alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title" style="font-size: 2.5rem;">Experience</h5>
-                    <p class="card-text" style="font-size: 2rem;">Some quick example text to build on the card title
-                        and make up the bulk of the
-                        card's content.</p>
                     <a href="{% url 'add-experience' %}" class="btn btn-success pl-3"
-                        style="font-size: 1.25rem;">Create</a>
-                    {% for experience in experiences %}
-                    <div class="d-flex justify-content-around">
-                        <p>{{experience.role}}</p>
-                        <a href="{% url 'edit-experience' experience.id %}" class="btn btn-primary pl-3"
-                            style="font-size: 1.25rem;">Edit</a>
-                        <a href="{% url 'delete-experience' experience.id %}" class="btn btn-danger pl-3"
-                            style="font-size: 1.25rem;">Delete</a>
-                    </div>
-                    {% endfor %}
+                        style="font-size: 1.5rem;">Create</a>
+                    <table class="table table-dark table-sm table-hover" style="font-size: 1.5rem;">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for experience in experiences %}
+                            <tr>
+                                <td>{{experience.company}}</td>
+                                <td>
+                                    <a class="btn btn-outline-info"
+                                        href="{% url 'edit-experience' experience.id %}">Edit</a>
+                                    <a class="btn btn-outline-danger"
+                                        href="{% url 'delete-experience' experience.id %}">Delete</a>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>

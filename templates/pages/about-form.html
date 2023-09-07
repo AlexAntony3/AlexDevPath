@@ -11,11 +11,16 @@
     </div>
 </div>
 
-<form action="" method="POST" enctype="multipart/form-data">
-    {% csrf_token %}
-    {{form}}
-    <input type="submit", name="Submit">
-</form>
-
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 text-center d-flex justify-content-between vstack">
+            <form action="" method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{form}}
+                <input type="submit" , name="Submit">
+            </form>
+        </div>
+    </div>
+</div>
 
 {% endblock %}
