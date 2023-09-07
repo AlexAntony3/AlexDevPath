@@ -39,11 +39,17 @@
                     <p class="card-text" style="font-size: 2rem;">Some quick example text to build on the card title
                         and make up the bulk of the
                         card's content.</p>
+                    <a href="{% url 'create-skill' %}" class="btn btn-success pl-3"
+                        style="font-size: 1.25rem;">Create</a>
+                    {% for skill in skills %}
                     <div class="d-flex justify-content-around">
-                        <a href="#" class="btn btn-primary pl-3" style="font-size: 1.25rem;">Edit</a>
-                        <a href="#" class="btn btn-success pl-3" style="font-size: 1.25rem;">Create</a>
-                        <a href="#" class="btn btn-danger pl-3" style="font-size: 1.25rem;">Delete</a>
+                        <p>{{skill.name}}</p>
+                        <a href="{% url 'edit-skill' skill.id %}" class="btn btn-primary pl-3"
+                            style="font-size: 1.25rem;">Edit</a>
+                        <a href="#" class="btn btn-danger pl-3"
+                            style="font-size: 1.25rem;">Delete</a>
                     </div>
+                    {% endfor %}
                 </div>
             </div>
         </div>

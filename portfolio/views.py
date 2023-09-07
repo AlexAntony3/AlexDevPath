@@ -54,7 +54,16 @@ def dashboard_view(request):
     Dashboard view for the for admin/staff to access restricted CRUD material
     """
     projects = Project.objects.all()
-    return render(request, 'pages/dashboard.html', {'projects': projects})
+    skills = Skill.objects.all()
+    about = About.objects.all()
+    education = Education.objects.all()
+    experience = Experience.objects.all()
+    return render(request, 'pages/dashboard.html', {'projects': projects,
+                                                    'skills': skills,
+                                                    #'about': about,
+                                                    #'education': edcuation,
+                                                    #'experience': experience
+                                                    })
 
 
 @staff_member_required
@@ -75,6 +84,23 @@ def create_project(request):
 
 
 @staff_member_required
+def create_skill(request):
+    """
+    Functionality for unrestricted users to create skills
+    """
+    form = SkillForm()
+    if request.method == 'POST':
+        form = SkillForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            messages.success(request, "Skill created Successfully!")
+            return redirect('dashboard')
+
+    context = {'form': form}
+    return render(request, 'pages/skill-form.html', context)
+
+
+@staff_member_required
 def edit_project(request, pk):
     """
     Functionality for unrestricted users to edit projects
@@ -91,6 +117,25 @@ def edit_project(request, pk):
 
     context = {'form': form}
     return render(request, 'pages/project-form.html', context)
+
+
+@staff_member_required
+def edit_skill(request, pk):
+    """
+    Functionality for unrestricted users to edit skills
+    """
+    skill = Skill.objects.get(id=pk)
+    form = SkillForm(instance=skill)
+
+    if request.method == 'POST':
+        form = SkillForm(request.POST, instance=skill)
+        if form.is_valid():
+            form.save()
+            messages.success(request, "Skill Edited Successfully!")
+            return redirect('dashboard')
+
+    context = {'form': form}
+    return render(request, 'pages/skill-form.html', context)
 
 
 @staff_member_required
