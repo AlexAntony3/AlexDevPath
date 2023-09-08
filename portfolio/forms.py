@@ -15,11 +15,25 @@ class AboutForm(forms.ModelForm):
                   'address']
 
         widgets = {
-            "second_image": forms.FileInput(attrs={"class": "form-control form-style"}),
-            "age": forms.NumberInput(attrs={"class": "form-control form-style", "placeholder": "Type in your age"}),
-            "nationality": forms.TextInput(attrs={"class": "form-control form-style", "placeholder": "Enter your nationality"}),
-            "languages": forms.TextInput(attrs={"class": "form-control form-style", "placeholder": "What languages do you speak?"}),
-            "address": forms.TextInput(attrs={"class": "form-control form-style", "placeholder": "Enter your city and country"}),
+            "second_image": forms.FileInput(attrs={
+                "class": "form-control form-style"
+                }),
+            "age": forms.NumberInput(attrs={
+                "class": "form-control form-style",
+                "placeholder": "Type in your age"
+                }),
+            "nationality": forms.TextInput(attrs={
+                "class": "form-control form-style",
+                "placeholder": "Enter your nationality"
+                }),
+            "languages": forms.TextInput(attrs={
+                "class": "form-control form-style",
+                "placeholder": "What languages do you speak?"
+                }),
+            "address": forms.TextInput(attrs={
+                "class": "form-control form-style",
+                "placeholder": "Enter your city and country"
+                }),
         }
 
 
@@ -50,12 +64,29 @@ class ProjectForm(forms.ModelForm):
                   'github_URL',]
 
         widgets = {
-            "name": forms.TextInput(attrs={"class": "form-control form-style", "placeholder": "Enter in your Skill"}),
-            "thumbnail": forms.FileInput(attrs={"class": "form-control form-style"}),
-            "skills": forms.RadioSelect(attrs={"class": "form-control form-style", "placeholder": "Write a devicon friendly icon e.g. html5"}),
-            "description": forms.Textarea(attrs={"rows": "3", "class": "form-control form-style", "placeholder": "Write a brief description of your role"}),
-            "live_url": forms.URLInput(attrs={"class": "form-control form-style", "placeholder": "Enter your live url in https://... format"}),
-            "github_URL": forms.URLInput(attrs={"class": "form-control form-style", "placeholder": "Enter your GitHub url in https://... format"})
+            "name": forms.TextInput(attrs={
+                "class": "form-control form-style",
+                "placeholder": "Enter in your Skill"
+                }),
+            "thumbnail": forms.FileInput(attrs={
+                "class": "form-control form-style"
+                }),
+            "skills": forms.RadioSelect(attrs={
+                "class": "form-control form-style",
+                "placeholder": "Write a devicon friendly icon e.g. html5"
+                }),
+            "description": forms.Textarea(attrs={
+                "rows": "3", "class": "form-control form-style",
+                "placeholder": "Write a brief description of your role"
+                }),
+            "live_url": forms.URLInput(attrs={
+                "class": "form-control form-style",
+                "placeholder": "Enter your live url in https://... format"
+                }),
+            "github_URL": forms.URLInput(attrs={
+                "class": "form-control form-style",
+                "placeholder": "Enter your GitHub url in https://... format"
+                })
         }
 
     skills = CustomMMCF(
@@ -75,9 +106,18 @@ class SkillForm(forms.ModelForm):
                   'icon',]
 
         widgets = {
-            "name": forms.TextInput(attrs={"class": "form-control form-style", "placeholder": "Enter in your Skill"}),
-            "proficiency": forms.NumberInput(attrs={"class": "form-control form-style", "placeholder": "Enter a number between 0-100"}),
-            "icon": forms.TextInput(attrs={"class": "form-control form-style", "placeholder": "Write a devicon friendly icon e.g. html5"}),
+            "name": forms.TextInput(attrs={
+                "class": "form-control form-style",
+                "placeholder": "Enter in your Skill"
+                }),
+            "proficiency": forms.NumberInput(attrs={
+                "class": "form-control form-style",
+                "placeholder": "Enter a number between 0-100"
+                }),
+            "icon": forms.TextInput(attrs={
+                "class": "form-control form-style",
+                "placeholder": "Write a devicon friendly icon e.g. html5"
+                }),
         }
 
 
@@ -93,10 +133,23 @@ class ExperienceForm(forms.ModelForm):
                   'description']
 
         widgets = {
-            "company": forms.TextInput(attrs={"class": "form-control form-style", "placeholder": "Enter in your Company name"}),
-            "role": forms.TextInput(attrs={"class": "form-control form-style", "placeholder": "Enter in your role"}),
-            "start_date": forms.DateInput(attrs={"class": "form-control form-style", "placeholder": "Enter in your start date in the format YYYY-MM-DD"}),
-            "description": forms.Textarea(attrs={"rows": "3", "class": "form-control form-style", "placeholder": "Write a brief description of your role"}),
+            "company": forms.TextInput(attrs={
+                "class": "form-control form-style",
+                "placeholder": "Enter in your Company name"
+                }),
+            "role": forms.TextInput(attrs={
+                "class": "form-control form-style",
+                "placeholder": "Enter in your role"
+                }),
+            "start_date": forms.DateInput(attrs={
+                "class": "form-control form-style",
+                "placeholder": "Enter in your start date in YYYY-MM-DD"
+                }),
+            "description": forms.Textarea(attrs={
+                "rows": "3",
+                "class": "form-control form-style",
+                "placeholder": "Write a brief description of your role"
+                }),
         }
 
 
@@ -112,8 +165,21 @@ class EducationForm(forms.ModelForm):
                   'description']
 
         widgets = {
-            "qualification": forms.TextInput(attrs={"class": "form-control form-style", "placeholder": "Enter in your qualification"}),
-            "institute": forms.TextInput(attrs={"class": "form-control form-style", "placeholder": "Enter in your institute"}),
-            "start_date": forms.DateInput(attrs={"class": "form-control form-style", "placeholder": "Enter in your start date in the format YYYY-MM-DD"}),
-            "description": forms.Textarea(attrs={"rows": "3", "class": "form-control form-style", "placeholder": "Write a brief description of your education"}),
+            "qualification": forms.TextInput(attrs={
+                "class": "form-control form-style",
+                "placeholder": "Enter in your qualification"
+                }),
+            "institute": forms.TextInput(attrs={
+                "class": "form-control form-style",
+                "placeholder": "Enter in your institute"
+                }),
+            "start_date": forms.DateInput(attrs={
+                "class": "form-control form-style",
+                "placeholder": "Enter in your start date in YYYY-MM-DD"
+                }),
+            "description": forms.Textarea(attrs={
+                "rows": "3",
+                "class": "form-control form-style",
+                "placeholder": "Write a brief description of your education"
+                }),
         }
