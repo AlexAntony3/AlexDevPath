@@ -1,4 +1,4 @@
-from .models import About, Project, Skill, Experience, Education
+from .models import About, Project, Skill, Experience, Education, Contact
 from django import forms
 
 
@@ -184,5 +184,39 @@ class EducationForm(forms.ModelForm):
                 "rows": "3",
                 "class": "form-control form-style",
                 "placeholder": "Write a brief description of your education"
+                }),
+        }
+
+
+class ContactForm(forms.ModelForm):
+    """
+    Form for the education section with widgets for styling
+    and formatting in the dashboard
+    """
+    class Meta:
+        model = Contact
+        fields = ['full_name',
+                  'number',
+                  'email',
+                  'message',
+                  ]
+
+        widgets = {
+            "full_name": forms.TextInput(attrs={
+                "class": "form-control form-style",
+                "placeholder": "Enter your full name here"
+                }),
+            "number": forms.NumberInput(attrs={
+                "class": "form-control form-style",
+                "placeholder": "Enter your phone number here"
+                }),
+            "email": forms.EmailInput(attrs={
+                "class": "form-control form-style",
+                "placeholder": "Enter your email here"
+                }),
+            "message": forms.Textarea(attrs={
+                "rows": "3",
+                "class": "form-control form-style",
+                "placeholder": "Type in anything you'd like to send to me !"
                 }),
         }

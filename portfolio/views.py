@@ -28,14 +28,24 @@ def show_all(request):
     context = {
         'home': home,
         'about': about,
+        'contact': contact,
         'educations': education,
         'experiences': experience,
-        'contact': contact,
         'projects': projects,
         'skills': skills
         }
 
     return render(request, 'pages/home.html', context)
+
+
+def contact_me(request):
+    if request.method == "POST":
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            form.save()
+    else:
+        form = ContactForm()
+    return render(request, 'home', {'form': form})
 
 
 @staff_member_required
@@ -114,6 +124,7 @@ def add_education(request):
     return render(request, 'pages/education-form.html', context)
 
 
+@staff_member_required
 def add_experience(request):
     """
     Functionality for unrestricted users to create projects

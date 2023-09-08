@@ -1,26 +1,9 @@
 <div class="col-md-6 pt-5 contact">
-    <form action="">
-        <div class="mb-3">
-            <label for="full-name" class="form-label">Full Name</label>
-            <input type="text" class="form-control" id="full_name" placeholder="John Smith">
-        </div>
-        <div class="mb-3">
-            <label for="number" class="form-label">Phone Number</label>
-            <input type="number" class="form-control" id="number" placeholder="07XXXXXXXXX">
-        </div>
-        <div class="mb-3">
-            <label for="email-entry" class="form-label">Email Address</label>
-            <input type="email" class="form-control" id="email-entry" placeholder="name@example.com">
-        </div>
-        <div class="mb-3">
-            <label for="text-area" class="form-label">What would you like to let me know?</label>
-            <textarea class="form-control" id="text-area" rows="10"
-                placeholder="What would you like to contact me about ?"></textarea>
-        </div>
-        <div class="d-flex justify-content-around">
-            <button type="submit" class="btn btn-primary mx-auto" name="submit">Send</button>
-            <button type="reset" class="btn btn-secondary mx-auto" name="reset">Reset</button>
-        </div>
+    <form action="" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{form}}
+        <a href="{% url 'home' %}" class="btn btn-dark btn-style">Back</a>
+        <input type="submit" , name="Submit" class="btn-style btn btn-primary">
     </form>
 </div>
 <div class="col-md-6 map-responsive">
