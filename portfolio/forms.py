@@ -4,7 +4,8 @@ from django import forms
 
 class AboutForm(forms.ModelForm):
     """
-    Interaction required for the user to update/enter 'about me' details
+    Form for the about section with widgets for styling
+    and formatting in the dashboard
     """
     class Meta:
         model = About
@@ -50,9 +51,8 @@ class CustomMMCF(forms.ModelMultipleChoiceField):
 
 class ProjectForm(forms.ModelForm):
     """
-    The required fields required for CRUD functionality for the project
-    This also incorporates the CustomMMCF function to allow the user to
-    pick more than one skill per project
+    Form for the Project section with widgets for styling
+    and formatting in the dashboard
     """
     class Meta:
         model = Project
@@ -97,7 +97,8 @@ class ProjectForm(forms.ModelForm):
 
 class SkillForm(forms.ModelForm):
     """
-    Allows the user to have CRUD functionality of skills
+    Form for the skills section with widgets for styling
+    and formatting in the dashboard
     """
     class Meta:
         model = Skill
@@ -123,7 +124,8 @@ class SkillForm(forms.ModelForm):
 
 class ExperienceForm(forms.ModelForm):
     """
-    Allows the user to have CRUD functionality of work history
+    Form for the experience section with widgets for styling
+    and formatting in the dashboard
     """
     class Meta:
         model = Experience
@@ -155,7 +157,8 @@ class ExperienceForm(forms.ModelForm):
 
 class EducationForm(forms.ModelForm):
     """
-    Allows the user to have CRUD functionality of education history
+    Form for the education section with widgets for styling
+    and formatting in the dashboard
     """
     class Meta:
         model = Education
