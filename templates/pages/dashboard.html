@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load static %}
 {% block content %}
 <div class="spacer">
     &nbsp;
@@ -21,7 +22,7 @@
     <div class="row">
         <div class="col-md-6 mb-4 mb-md-0 d-flex justify-content-around">
             <div class="card bg-dark text-white text-center">
-                <img class="card-img-top" src="/static/media/about-image.png" alt="Card image cap">
+                <img class="card-img-top" src="{% static 'media/about-image.png' %}" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title" style="font-size: 2.5rem;">About</h5>
                     {% for data in about %}
@@ -33,7 +34,7 @@
         </div>
         <div class="col-md-6 mb-4 mb-md-0 d-flex justify-content-around">
             <div class="card bg-dark text-white text-center rounded">
-                <img class="card-img-top" src="/static/media/skills-image.png" alt="Card image cap">
+                <img class="card-img-top" src="{% static 'media/skills-image.png' %}" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title" style="font-size: 2.5rem;">Skills</h5>
                     <a href="{% url 'create-skill' %}" class="btn btn-success pl-3"
@@ -67,7 +68,7 @@
     <div class="row">
         <div class="col-md-6 mb-4 mb-md-0 d-flex justify-content-around">
             <div class="card bg-dark text-white text-center">
-                <img class="card-img-top" src="/static/media/project-image.png" alt="Card image cap">
+                <img class="card-img-top" src="{% static 'media/project-image.png' %}" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title" style="font-size: 2.5rem;">Projects</h5>
                     <a href="{% url 'create-project' %}" class="btn btn-success pl-3"
@@ -97,7 +98,7 @@
         </div>
         <div class="col-md-6 mb-4 mb-md-0 d-flex justify-content-around">
             <div class="card bg-dark text-white text-center">
-                <img class="card-img-top" src="/static/media/education-image.png" alt="Card image cap">
+                <img class="card-img-top" src="{% static 'media/education-image.png' %}" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title" style="font-size: 2.5rem;">Education</h5>
                     <a href="{% url 'add-education' %}" class="btn btn-success pl-3"
@@ -132,7 +133,7 @@
     <div class="row">
         <div class="col-md-12 d-flex justify-content-around">
             <div class="card bg-dark text-white text-center">
-                <img class="card-img-top" src="/static/media/experience-image.png" alt="Card image cap">
+                <img class="card-img-top" src="{% static 'media/experience-image.png' %}" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title" style="font-size: 2.5rem;">Experience</h5>
                     <a href="{% url 'add-experience' %}" class="btn btn-success pl-3"
@@ -163,4 +164,5 @@
         </div>
     </div>
 </div>
+
 {% endblock %}
