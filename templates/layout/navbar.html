@@ -1,6 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark nav-bar-dark fixed-top">
     <div class="container-fluid">
-        <a class="navbar-brand" href="{% url 'home' %}#home"><img src="/static/media/Logo.png" alt="alex's dev path logo"></a>
+        <a class="navbar-brand" href="{% url 'home' %}#home"><img src="/static/media/Logo.png"
+                alt="alex's dev path logo"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -23,9 +24,22 @@
                     <a class="nav-link" href="{% url 'home' %}#contact">Contact</a>
                 </li>
                 {% if request.user.is_staff %}
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'dashboard' %}">Dashboard</a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Staff
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li class="nav-item"><a class="dropdown-item" href="{% url 'dashboard' %}">Dashboard</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li class="nav-item"><a class="dropdown-item" class="nav-link" href="{% url 'logout' %}">Logout</a></li>
+                    </ul>
                 </li>
+                <!-- <li class="nav-item">
+                    <a class="nav-link" href="{% url 'dashboard' %}">Dashboard</a>
+                </li> -->
                 {% endif %}
             </ul>
         </div>

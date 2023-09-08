@@ -4,12 +4,18 @@
 <div class="spacer">
     &nbsp;
 </div>
+{% for message in messages %}
+{% if message.tags == 'success' %}
+<div class="toast-body bg-success text-light position-relative top-0 end-0 p-3" style="z-index: 11; font-size: 1.5rem;">
+    {{message}}
+</div>
+{% endif %}
+{% endfor %}
 <div class="container h-100" id="home">
     <div class="row text-center">
         {% include 'components/home-screen.html' %}
     </div>
 </div>
-
 
 <div class="container-fluid background-title text-center" id="about">
     <div class="row">

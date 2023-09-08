@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.views import generic
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth import logout
 from django.contrib import messages
 from django.http import HttpResponseRedirect, HttpResponse
 from django.contrib.admin.views.decorators import staff_member_required
@@ -53,6 +54,13 @@ def dashboard_view(request):
                                                     'educations': educations,
                                                     'experiences': experiences,
                                                     })
+
+
+@staff_member_required
+def logout_view(request):
+    logout(request)
+    messages.success(request, "Successfully logged out!")
+    return redirect('home')
 
 
 @staff_member_required
