@@ -34,7 +34,7 @@ class About(models.Model):
 
     def __str__(self):
         """
-        returns a string response with the title 
+        returns a string response with the title
         in the about section for the admin
         """
         return self.title
@@ -92,7 +92,7 @@ class Experience(models.Model):
 
 class Education(models.Model):
     """
-    defines the education model from which 
+    defines the education model from which
     the education history can be presented
     """
     institute = models.CharField(max_length=200)

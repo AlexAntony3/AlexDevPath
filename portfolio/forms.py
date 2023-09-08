@@ -61,7 +61,7 @@ class ProjectForm(forms.ModelForm):
                   'skills',
                   'description',
                   'live_url',
-                  'github_URL',]
+                  'github_URL', ]
 
         widgets = {
             "name": forms.TextInput(attrs={
@@ -104,7 +104,7 @@ class SkillForm(forms.ModelForm):
         model = Skill
         fields = ['name',
                   'proficiency',
-                  'icon',]
+                  'icon', ]
 
         widgets = {
             "name": forms.TextInput(attrs={
