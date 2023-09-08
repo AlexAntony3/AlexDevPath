@@ -1,9 +1,27 @@
-<div class="col-md-6 pt-5 contact">
-    <form action="" method="POST" enctype="multipart/form-data">
+<div class="col-md-6 form-style contact">
+    <form action="" method="post">
         {% csrf_token %}
-        {{form}}
-        <a href="{% url 'home' %}" class="btn btn-dark btn-style">Back</a>
-        <input type="submit" , name="Submit" class="btn-style btn btn-primary">
+        <div class="mb-3">
+            <label for="full-name" class="form-label">Full Name</label>
+            <input type="text" class="form-control" name="name" placeholder="John Smith" required>
+        </div>
+        <div class="mb-3">
+            <label for="number" class="form-label">Phone Number</label>
+            <input type="number" class="form-control" name="number" placeholder="07XXXXXXXXX" required>
+        </div>
+        <div class="mb-3">
+            <label for="email-entry" class="form-label">Email Address</label>
+            <input type="email" class="form-control" name="email" placeholder="name@example.com" required>
+        </div>
+        <div class="mb-3">
+            <label for="text-area" class="form-label">What would you like to let me know?</label>
+            <textarea class="form-control" rows="10" name="message"
+                placeholder="What would you like to contact me about ?" required></textarea>
+        </div>
+        <div class="d-flex justify-content-around">
+            <button type="submit" class="btn btn-success mx-auto" name="submit">Send</button>
+            <button type="reset" class="btn btn-dark mx-auto" name="reset">Reset</button>
+        </div>
     </form>
 </div>
 <div class="col-md-6 map-responsive">

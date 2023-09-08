@@ -200,23 +200,3 @@ class ContactForm(forms.ModelForm):
                   'email',
                   'message',
                   ]
-
-        widgets = {
-            "full_name": forms.TextInput(attrs={
-                "class": "form-control form-style",
-                "placeholder": "Enter your full name here"
-                }),
-            "number": forms.NumberInput(attrs={
-                "class": "form-control form-style",
-                "placeholder": "Enter your phone number here"
-                }),
-            "email": forms.EmailInput(attrs={
-                "class": "form-control form-style",
-                "placeholder": "Enter your email here"
-                }),
-            "message": forms.Textarea(attrs={
-                "rows": "3",
-                "class": "form-control form-style",
-                "placeholder": "Type in anything you'd like to send to me !"
-                }),
-        }

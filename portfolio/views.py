@@ -35,17 +35,33 @@ def show_all(request):
         'skills': skills
         }
 
+    if request.method == 'POST':
+        name = request.POST.get('name')
+        phone = request.POST.get('number')
+        femail = request.POST.get('email')
+        comment = request.POST.get('message')
+        query = Contact(full_name=name, number=phone, email=femail, message=comment)
+        query.save()
+        messages.success(request, "Thank you for contacting me!")
+        return redirect('home')
+
     return render(request, 'pages/home.html', context)
 
 
-def contact_me(request):
-    if request.method == "POST":
-        form = ContactForm(request.POST)
-        if form.is_valid():
-            form.save()
-    else:
-        form = ContactForm()
-    return render(request, 'home', {'form': form})
+# def contact(request):
+#     """
+#     Functionality for unrestricted users to create skills
+#     """
+#     if request.method == 'POST':
+#         name = request.POST.get('name')
+#         phone = request.POST.get('number')
+#         femail = request.POST.get('email')
+#         comment = request.POST.get('name')
+#         query = Contact(full_name=name, number=phone, email=femail, message=comment)
+#         query.save()
+#         messages.success(request, "Thank you for contacting me!")
+#         return redirect('home')
+#     return render(request, 'components/contact-form.html')
 
 
 @staff_member_required
