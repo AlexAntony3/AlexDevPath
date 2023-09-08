@@ -460,3 +460,19 @@ span {
     position: absolute;
 }
 
+/* forms */
+
+.form-style {
+    padding: 1rem;
+    font-size: 1.5rem;
+    color: var(--blue-background);
+    font-weight: 500;
+    margin: 1rem 0 1rem 0;
+}
+
+.btn-style {
+    margin-top: 2rem;
+    padding: 2rem;
+    width: 100%;
+    font-size: 1.5rem;
+}

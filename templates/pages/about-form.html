@@ -13,11 +13,12 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-md-12 text-center d-flex justify-content-between vstack">
+        <div class="col-xs-4 form-style">
             <form action="" method="POST" enctype="multipart/form-data">
                 {% csrf_token %}
                 {{form}}
-                <input type="submit" , name="Submit">
+                <a href="{% url 'dashboard' %}" class="btn btn-dark btn-style">Back</a>
+                <input type="submit" , name="Submit" class="btn-style btn btn-primary">
             </form>
         </div>
     </div>
