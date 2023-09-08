@@ -196,6 +196,24 @@ span {
     background: #219EBC;
 }
 
+
+/* Projects */
+
+.project-fonts {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.project-skills {
+    font-size: 2rem;
+}
+
+.project-links {
+    margin: 0.8rem 0;
+    padding: 0.8rem;
+    font-size: 2rem;
+}
+
 /* Education and Experiences */
 
 /* footer */
@@ -475,4 +493,12 @@ span {
     padding: 2rem;
     width: 100%;
     font-size: 1.5rem;
+}
+
+.delete-title {
+    font-size: 3rem;
+}
+
+.delete-btn {
+    font-size: 4rem;
 }
