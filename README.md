@@ -402,6 +402,13 @@ All of these elements improve the user interactivity and also if any errors or m
 * [CI pep8 linter](https://pep8ci.herokuapp.com/)
 * [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/)
 
+## Testing
+
+### W3C HTML validation
+
+### W3C CSS validation
+
+
 ## Deployment
 
 One of the first and most important things to do in the project, is to deploy to heroku. This prevents any unexpected errors to appear and makes life a lot easier. 
