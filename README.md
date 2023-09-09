@@ -248,6 +248,43 @@ To develop the database schema, i used [DrawSQL](https://drawsql.app/). I was ab
 **Home Screen Small**
 [add home screen here]
 
+### About Page
+
+* The about page is main aspect of the website that shares personal details about me, this is an important section which enables the user to be able to relate and learn about myself. The about page has multiple components about myself which can be dynamically edited to change variables according to the situation at the time.
+
+* Another major component in the about page is a picture of me, however the picture isn't an avatar, it is an actual photo of myself. This is again to allow the user to build a relation with myself. The border and shape of the image is the same as the image on the home screen, again for consistency and improves the UI.
+
+**About Page Large**
+[add about page large]
+
+**About Page Small**
+[add about page small]
+
+### Skills Section
+
+* Even though the skills section is on the same page as the about page, it required multiple variables for it to function so it is being treated as a different section.
+
+* The skills section is again another dynamic element in which the user is able to see the skill by name, proficiency in the skill and also the relevant icon. The icon is generated using [Devicon](https://devicon.dev/) which is a great alternative to font-awesome and provides clear language icons. Proficiency is a popular feature observed in a lot of portfolios. The light blue background clearly contrasts against the dark background which engages the user and stands out of the page.
+
+**Skills Section Large**
+[add skills section large]
+
+**skills section small**
+[add skills section small]
+
+### Projects Page
+
+* The projects page is the main focal point of the website, it showcases my efforts, projects and also what languages are associated with each project. It is one of the biggest elements on the website, as it is the reason why the vast majority of users visit the website. It draws the attention of users, contrasts well with the background and provides a lot of information
+
+* The project page contains three key elements which are GitHub url, Live link url and the skills devicon. This allows the user to interact with the website and allows them to explore what they want to in their own time. The colours used in these elements are again used throughout the project to remain consistency. The skills are attained through the many to many relationship that was detailed earlier in the readme, as numerous elements can be selected, a variety of icons are displayed per project
+
+* The carousel item that displays the projects is dynamic and is an interactive activity for the user which improves how long the user stays on the website.
+
+**Project section Large**
+[add project section large]
+
+**Project section small**
+[add project section small]
 
 ## Technologies Used
 
