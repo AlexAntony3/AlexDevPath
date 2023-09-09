@@ -211,6 +211,8 @@ To develop the database schema, i used [DrawSQL](https://drawsql.app/). I was ab
 
 ## Existing Features
 
+All screenshots of the features are present in the responsivness test
+
 ### Header and Navigation Bar
 
 * The header and navigation bar are elements that stay consistent throughout the project. This provides the user with a better user experience and allows them keep engaged within the website.
@@ -221,32 +223,12 @@ To develop the database schema, i used [DrawSQL](https://drawsql.app/). I was ab
 
 * The header and navigation bar is also dynamic as in lower screen sizes the hamburger icon appears and the navbar drops vertically which is the industry standard. 
 
-**Large Screen Header**
-[add header photo here]
-
-**Staff Large Screen Header**
-[add staff header photo]
-
-**Small Screen Header**
-[add small screen header]
-
-**Small Staff Screen Header**
-[add small staff screen header]
-
-**Post Logout**
-[add post logout screen]
-
 ### Home Screen
 
 * The home screen contains a brief introduction into who I am, a little bit of my experience, and an avatar picture. This was something else I noted was very popular among other developers when creating a portfolio.
 
 * The main element noted in the home screen is the bright background which contrasts heavily against the navigation bar and the next section. A pattern is included within the background so that more intricasy is introduced into the webise. 
 
-**Home Screen Large**
-[add home screen here]
-
-**Home Screen Small**
-[add home screen here]
 
 ### About Page
 
@@ -254,11 +236,6 @@ To develop the database schema, i used [DrawSQL](https://drawsql.app/). I was ab
 
 * Another major component in the about page is a picture of me, however the picture isn't an avatar, it is an actual photo of myself. This is again to allow the user to build a relation with myself. The border and shape of the image is the same as the image on the home screen, again for consistency and improves the UI.
 
-**About Page Large**
-[add about page large]
-
-**About Page Small**
-[add about page small]
 
 ### Skills Section
 
@@ -266,11 +243,6 @@ To develop the database schema, i used [DrawSQL](https://drawsql.app/). I was ab
 
 * The skills section is again another dynamic element in which the user is able to see the skill by name, proficiency in the skill and also the relevant icon. The icon is generated using [Devicon](https://devicon.dev/) which is a great alternative to font-awesome and provides clear language icons. Proficiency is a popular feature observed in a lot of portfolios. The light blue background clearly contrasts against the dark background which engages the user and stands out of the page.
 
-**Skills Section Large**
-[add skills section large]
-
-**skills section small**
-[add skills section small]
 
 ### Projects Page
 
@@ -280,11 +252,6 @@ To develop the database schema, i used [DrawSQL](https://drawsql.app/). I was ab
 
 * The carousel item that displays the projects is dynamic and is an interactive activity for the user which improves how long the user stays on the website.
 
-**Project section Large**
-[add project section large]
-
-**Project section small**
-[add project section small]
 
 ### Resume Section
 
@@ -292,11 +259,6 @@ To develop the database schema, i used [DrawSQL](https://drawsql.app/). I was ab
 
 * The resume section contains start-date, description, intitute and qualification which provides the exact required amount of information. This informs the user about my "dev" path. The experience section contains start date, description, role and company, again this is the same as the education section. The colours of the timeline used is relevant to the colour scheme and fits with the page well. 
 
-**Resume section Large**
-[add resume section large]
-
-**Resume section small**
-[add resume section small]
 
 ### Contact Page
 
@@ -304,14 +266,6 @@ To develop the database schema, i used [DrawSQL](https://drawsql.app/). I was ab
 
 * The second seciton in the contact page is a responsive google map for my address. This is a mandatory element in every portfolio so that potential employers can identify if I'm from the local area. As well as this, as it is an interactive map, the user is free to scroll around over the map which improves the interactivity that the user can do on the page. 
 
-**Contact page Large**
-[add contact page large]
-
-**Contact page small**
-[add contact page small]
-
-**Toast**
-[add toast]
 
 ### Dashboard 
 
@@ -327,39 +281,18 @@ All of these elements improve the user interactivity and also if any errors or m
 
 * All CRUD functionality is shown in the images below, after all CRUD changes a toast is presented to the user to let them know that the transaction they required has performed. 
 
-**About Edit**
-[screen shot About Edit page]
-
-**Skills CRUD**
-[screen shot Skills CRUD]
-
-**Project CRUD**
-[screen shot Project CRUD]
-
-**Education CRUD**
-[screen shot Education CRUD]
-
-**Experience CRUD**
-[screen shot Experience  CRUD]
 
 ### Admin Panel
 
 * The admin panel is a very powerful and resourceful tool, it is reachable by typing in /admin at the end of the address. After authentication, a user is able to have full functionality of the website. 
 * The superuser when using the admin panel has more unrestricted access compared to the staff member. The superuser currently is me as I'd need to receive and respond to all communications delivered to the contacts model in the admin panel. 
 
-**Admin Panel**
-[admin panel screenshot]
 
 ### Footer
 
 * The final feature is the footer, a bootstrap driven footer thats trendy, fits well within the page and contains lots of key information. The user is able to reach social media, contact my phone, email or post a letter directly. 
 * Futhermore, the footer contains the logo to tie in the website together as it starts and ends with the logo. This is common practise when I observed other portfolio.
 
-**Footer large screen**
-[footer screen large]
-
-**Footer small screen**
-[footer screen small]
 
 ## Future implementations
 * With more resource and time, I would like to add a download CV button. This would allow a potential recruiter to have a look at the CV prior to reaching out, which would save both parties ample time.
@@ -406,8 +339,190 @@ All of these elements improve the user interactivity and also if any errors or m
 
 ### W3C HTML validation
 
+
 ### W3C CSS validation
 
+All tests passed
+
+![Database Schema](docs/database-schema.png)
+
+### Pep8 validation testing
+
+All tests passed
+
+**views.py**
+![views.py](docs/viewspy.png)
+
+**models.py**
+![models.py](docs/modelspy.png)
+
+**admin.py**
+![admin.py](docs/adminpy.png)
+
+**apps.py**
+![apps.py](docs/appspy.png)
+
+**forms.py**
+![forms.py](docs/formspy.png)
+
+**urls.py**
+![forms.py](docs/urlspy.png)
+
+
+### Lighthouse Testing
+
+### Responsiveness Testing
+
+### Features Testing
+
+**Home page**
+|Test  | Expected Outcome  | Pass or Fail |
+|--|--|--|
+| Logo present? | Yes  | Pass |
+| Click Logo in nav bar | Redirect to Home page  | Pass |
+| Hover over nav buttons | Orange hover colour  | Pass |
+| Click Home in nav bar | Redirect to Home page  | Pass |
+| Click About in nav bar| Redirect to About page  | Pass |
+| Click Projects in nav bar | Redirect to Projects page  | Pass |
+| Click Resume in nav bar | Redirect to Resume page  | Pass |
+| Click Contact in nav bar | Redirect to Contact page  | Pass |
+| Click Staff in nav bar | Drop down box  | Pass |
+| Click Staff > Dashboard| Redirect to Dashboard page  | Pass |
+| Click Staff > Logout| Redirect to home page with message | Pass |
+| Click Staff| Not possible as logged out | Pass |
+
+**About page**
+|Test  | Expected Outcome  | Pass or Fail |
+|--|--|--|
+| Avatar image present? | Yes  | Pass |
+| All about model fields present and accurate? | Yes | Pass |
+| Skills Box present? | Yes | Pass |
+| Progress bar showing? | Yes | Pass |
+| Devicon showing and relevant? | Yes | Pass |
+| Progress bar unit showing? | Yes | Pass |
+
+**Project page**
+|Test  | Expected Outcome  | Pass or Fail |
+|--|--|--|
+| Carousel present? | Yes  | Pass |
+|  Click Live link button | Yes  | Pass |
+| Click GitHub link button | Yes  | Pass |
+| Project Title present? | Yes  | Pass |
+| Project related skill present? | Yes  | Pass but is very small |
+| Project related description present? | Yes  | Pass but is very small |
+| Click left arrow key | go left 1 project  | Pass |
+| Click right arrow key | go right 1 project  | Pass |
+
+**Resume page**
+|Test  | Expected Outcome  | Pass or Fail |
+|--|--|--|
+| Relevant icon present? | Yes  | Pass |
+| All items in timeline format? | Yes  | Pass |
+| Qualification present? | Yes  | Pass |
+| Institute Present | Yes  | Pass |
+| Start date present? | Yes  | Pass |
+| Description Present? | Yes  | Pass |
+| Are all fields relevant? | Yes  | Pass |
+| Role Present? | Yes  | Pass |
+| Company Present? | Yes  | Pass |
+| Start date present? | Yes  | Pass |
+| Description Present? | Yes  | Pass |
+
+**Contact us page**
+|Test  | Expected Outcome  | Pass or Fail |
+|--|--|--|
+| Form present? | Yes  | Pass |
+| Placeholders in form present and relevant? | Yes  | Pass |
+| Click reset button | Reset form  | Pass |
+| Validation present? | yes on all fields | Pass |
+| Click Send button | success message | Pass |
+| Map present? | Yes | Pass |
+| All map functionalities working? | Yes | Pass |
+
+**Footer**
+|Test  | Expected Outcome  | Pass or Fail |
+|--|--|--|
+| Footer present? | Yes  | Pass |
+| Footer contains logo? | Yes  | Pass |
+| Footer contains social media links? | Yes  | Pass |
+| Click social media links | all opens in new tab  | Pass |
+| Hover over all icons | Dark orange hover  | Pass |
+| Copyright tag present? | Yes  | Pass |
+
+**Dashboard**
+|Test  | Expected Outcome  | Pass or Fail |
+|--|--|--|
+| Logo present? | Yes  | Pass |
+| Click Logo in nav bar | Redirect to Home page  | Pass |
+| Hover over nav buttons | Orange hover colour  | Pass |
+| Click Home in nav bar | Redirect to Home page  | Pass |
+| Click About in nav bar| Redirect to About page  | Pass |
+| Click Projects in nav bar | Redirect to Projects page  | Pass |
+| Click Resume in nav bar | Redirect to Resume page  | Pass |
+| Click Contact in nav bar | Redirect to Contact page  | Pass |
+| Click Staff in nav bar | Drop down box  | Pass |
+| Click Staff > Dashboard| Redirect to Dashboard page  | Pass |
+| Click Staff > Logout| Redirect to home page with message | Pass |
+| Click Staff| Not possible as logged out | Pass |
+
+**About section**
+|Test  | Expected Outcome  | Pass or Fail |
+|--|--|--|
+| Thumbnail present? | Yes  | Pass |
+| Click edit button | edit about page loaded | Pass |
+| Click edit button | edit about page loaded | Pass |
+| Submit form with no entries | validation throws error | Pass |
+| Click back button | goes back to dashboard | Pass |
+| Click submit data with filled in data | redirect to dashboard with success message | Pass |
+| All navigation items working? | yes | Pass |
+
+**Skills Section**
+|Test  | Expected Outcome  | Pass or Fail |
+|--|--|--|
+| Hover over every button | hover effect displayed  | Pass |
+| Click create button | skill form opened  | Pass |
+| Click edit button |skill form opened  | Pass |
+| Click delete button |delete skill form opened  | Pass |
+| Is form validating empty entries |Yes | Pass |
+| Can you create a skill? | Yes  | Pass |
+| Can you edit a skill? | Yes  | Pass |
+| Can you delete a skill? | Yes  | Pass |
+
+**Project Section**
+|Test  | Expected Outcome  | Pass or Fail |
+|--|--|--|
+| Hover over every button | hover effect displayed  | Pass |
+| Click create button | Project form opened  | Pass |
+| Click edit button |Project form opened  | Pass |
+| Click delete button |delete Project form opened  | Pass |
+| Is form validating empty entries |Yes | Pass |
+| Can you create a Project? | Yes  | Pass |
+| Can you edit a Project? | Yes  | Pass |
+| Can you delete a Project? | Yes  | Pass |
+
+**Education Section**
+|Test  | Expected Outcome  | Pass or Fail |
+|--|--|--|
+| Hover over every button | hover effect displayed  | Pass |
+| Click create button | Education form opened  | Pass |
+| Click edit button |Education form opened  | Pass |
+| Click delete button |delete Education form opened  | Pass |
+| Is form validating empty entries |Yes | Pass |
+| Can you create a Education? | Yes  | Pass |
+| Can you edit a Education? | Yes  | Pass |
+| Can you delete a Education? | Yes  | Pass |
+
+**Experience section**
+|Test  | Expected Outcome  | Pass or Fail |
+|--|--|--|
+| Hover over every button | hover effect displayed  | Pass |
+| Click create button | Experience form opened  | Pass |
+| Click edit button |Experience form opened  | Pass |
+| Click delete button |delete Experience form opened  | Pass |
+| Is form validating empty entries |Yes | Pass |
+| Can you create a Experience? | Yes  | Pass |
+| Can you edit a Experience? | Yes  | Pass |
+| Can you delete a Experience? | Yes  | Pass |
 
 ## Deployment
 
