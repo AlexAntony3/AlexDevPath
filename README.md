@@ -339,12 +339,11 @@ All of these elements improve the user interactivity and also if any errors or m
 
 ### W3C HTML validation
 
+All tests passed however due to time constraints I couldn't take a screenshot
 
 ### W3C CSS validation
 
-All tests passed
-
-![Database Schema](docs/database-schema.png)
+All tests passed however due to time constraints I couldn't take a screenshot
 
 ### Pep8 validation testing
 
@@ -370,6 +369,8 @@ All tests passed
 
 
 ### Lighthouse Testing
+
+All tests passed however due to time constraints I couldn't take a screenshot
 
 ### Responsiveness Testing
 
@@ -822,4 +823,4 @@ When creating a superuser, enter a username, email (optional) and password twice
 ## Credits
 
 * [Simen Daehlin](https://www.linkedin.com/in/simendaehlin/ "Simen Daehlin") - Assistance throughout the project
-* My testing team, this was a team of my colleagues, friends and family. - Thank you for all the rigerous testing and feedback.
+* Thank you to the slack team for really supporting me through this. This was an intense course.
