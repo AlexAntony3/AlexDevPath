@@ -373,6 +373,24 @@ All tests passed
 
 ### Responsiveness Testing
 
+All tests passed, all pages were tested at various breakpoints. Due to time contstrains only images of very large and very small (320px) were taken
+
+**large**
+![responsiveness-large](docs/responsiveness-testing-large.png)
+
+**Small**
+![responsiveness-small-a](docs/responsiveness-testing-small-a.png)
+![responsiveness-small-b](docs/responsiveness-testing-small-b.png)
+![responsiveness-small-c](docs/responsiveness-testing-small-c.png)
+
+**Dashboard**
+**large**
+![responsiveness-large](docs/dashboard-r-large.png)
+
+**small**
+![responsiveness-small-aa](docs/dashboard-small-a.png)
+![responsiveness-small-bb](docs/dashboard-small-b.png)
+
 ### Features Testing
 
 **Home page**
