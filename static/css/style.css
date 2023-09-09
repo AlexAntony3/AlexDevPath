@@ -94,10 +94,8 @@ h5 {
 
 /* About page and skills progress bar */
 
-#display-picture {
-    width: 35rem;
-    height: 35rem;
-    border-radius: 50rem;
+.display-picture {
+    border-radius: 50%;
     border: 1rem solid var(--blue-background);
 }
 
