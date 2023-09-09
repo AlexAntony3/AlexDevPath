@@ -186,17 +186,3 @@ class EducationForm(forms.ModelForm):
                 "placeholder": "Write a brief description of your education"
                 }),
         }
-
-
-class ContactForm(forms.ModelForm):
-    """
-    Form for the education section with widgets for styling
-    and formatting in the dashboard
-    """
-    class Meta:
-        model = Contact
-        fields = ['full_name',
-                  'number',
-                  'email',
-                  'message',
-                  ]

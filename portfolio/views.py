@@ -73,6 +73,9 @@ def dashboard_view(request):
 
 @staff_member_required
 def logout_view(request):
+    """
+    View for the logout function of the staff/admin
+    """
     logout(request)
     messages.success(request, "Successfully logged out!")
     return redirect('home')
@@ -115,7 +118,7 @@ def create_skill(request):
 @staff_member_required
 def add_education(request):
     """
-    Functionality for unrestricted users to create projects
+    Functionality for unrestricted users to add education items
     """
     form = EducationForm()
     if request.method == 'POST':
@@ -132,7 +135,7 @@ def add_education(request):
 @staff_member_required
 def add_experience(request):
     """
-    Functionality for unrestricted users to create projects
+    Functionality for unrestricted users to add experience items
     """
     form = ExperienceForm()
     if request.method == 'POST':
@@ -187,7 +190,7 @@ def edit_skill(request, pk):
 @staff_member_required
 def edit_about(request, pk):
     """
-    Functionality for unrestricted users to edit skills
+    Functionality for unrestricted users to edit the about section
     """
     about = About.objects.get(id=pk)
     form = AboutForm(instance=about)
@@ -206,7 +209,7 @@ def edit_about(request, pk):
 @staff_member_required
 def edit_education(request, pk):
     """
-    Functionality for unrestricted users to edit skills
+    Functionality for unrestricted users to edit the education section
     """
     education = Education.objects.get(id=pk)
     form = EducationForm(instance=education)
@@ -225,7 +228,7 @@ def edit_education(request, pk):
 @staff_member_required
 def edit_experience(request, pk):
     """
-    Functionality for unrestricted users to edit skills
+    Functionality for unrestricted users to edit the experience section
     """
     experience = Experience.objects.get(id=pk)
     form = ExperienceForm(instance=experience)
@@ -274,7 +277,7 @@ def delete_skill(request, pk):
 @staff_member_required
 def delete_education(request, pk):
     """
-    Functionality for unrestricted users to delete skils
+    Functionality for unrestricted users to delete education items
     """
     education = Education.objects.get(id=pk)
     if request.method == 'POST':
@@ -289,7 +292,7 @@ def delete_education(request, pk):
 @staff_member_required
 def delete_experience(request, pk):
     """
-    Functionality for unrestricted users to delete skils
+    Functionality for unrestricted users to delete experience items
     """
     experience = Experience.objects.get(id=pk)
     if request.method == 'POST':
