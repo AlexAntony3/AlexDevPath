@@ -286,6 +286,88 @@ To develop the database schema, i used [DrawSQL](https://drawsql.app/). I was ab
 **Project section small**
 [add project section small]
 
+### Resume Section
+
+* The resume section contains two items, education and experience. Both of these elements are displayed on the same page side by side (in a large screen) in a timeline format that isn't very commonly observed on other portfolio due to difficulty in maintainance. However, this was configured appropriately and is dynamic. The timeline elements displays all education and experience in a very user friendly way. 
+
+* The resume section contains start-date, description, intitute and qualification which provides the exact required amount of information. This informs the user about my "dev" path. The experience section contains start date, description, role and company, again this is the same as the education section. The colours of the timeline used is relevant to the colour scheme and fits with the page well. 
+
+**Resume section Large**
+[add resume section large]
+
+**Resume section small**
+[add resume section small]
+
+### Contact Page
+
+* The contact page is a typical contact page. It contains two sections, one for a form that allows the user to enter their name, email, phone number and a message to allow them to get into contact with myself for any reason. This message is then sent to the admin dashboard which can be reviewed by myself. Once a message is delivered, a green toast is presented to the the user allowing them to know that the message has successfully sent.
+
+* The second seciton in the contact page is a responsive google map for my address. This is a mandatory element in every portfolio so that potential employers can identify if I'm from the local area. As well as this, as it is an interactive map, the user is free to scroll around over the map which improves the interactivity that the user can do on the page. 
+
+**Contact page Large**
+[add contact page large]
+
+**Contact page small**
+[add contact page small]
+
+**Toast**
+[add toast]
+
+### Dashboard 
+
+The dashboard is the most principal area for superusers/ staff. This is because all CRUD functionality is controlled through the dashboard. The dashboard contains:
+* Edit only functionality for the about page
+* Full CRUD functionality for the skills page
+* Full CRUD functionality for the projects page
+* Full CRUD functionality for the education page
+* Full CRUD functionality for the experience page
+All of these elements improve the user interactivity and also if any errors or mistakes are made, it can be resolved quickly and effectively. 
+
+* As the dashboard is only accessible by the superuser/ staff, it requires a log in to be able to access this, which should not be presented to the general user as they will not require a function to login. Therefore the log in is hidden and by adding "/dashboard" the superuser/ staff can type their username and password in to log in. As previously mentioned once the user is logged in the navbar changes, it will allow the user to explore any section of the website, dashboard and log out when required. 
+
+* All CRUD functionality is shown in the images below, after all CRUD changes a toast is presented to the user to let them know that the transaction they required has performed. 
+
+**About Edit**
+[screen shot About Edit page]
+
+**Skills CRUD**
+[screen shot Skills CRUD]
+
+**Project CRUD**
+[screen shot Project CRUD]
+
+**Education CRUD**
+[screen shot Education CRUD]
+
+**Experience CRUD**
+[screen shot Experience  CRUD]
+
+### Admin Panel
+
+* The admin panel is a very powerful and resourceful tool, it is reachable by typing in /admin at the end of the address. After authentication, a user is able to have full functionality of the website. 
+* The superuser when using the admin panel has more unrestricted access compared to the staff member. The superuser currently is me as I'd need to receive and respond to all communications delivered to the contacts model in the admin panel. 
+
+**Admin Panel**
+[admin panel screenshot]
+
+### Footer
+
+* The final feature is the footer, a bootstrap driven footer thats trendy, fits well within the page and contains lots of key information. The user is able to reach social media, contact my phone, email or post a letter directly. 
+* Futhermore, the footer contains the logo to tie in the website together as it starts and ends with the logo. This is common practise when I observed other portfolio.
+
+**Footer large screen**
+[footer screen large]
+
+**Footer small screen**
+[footer screen small]
+
+## Future implementations
+* With more resource and time, I would like to add a download CV button. This would allow a potential recruiter to have a look at the CV prior to reaching out, which would save both parties ample time.
+
+* With more resource and time, I would configure the log in page and style it appropriately, currently it is using the django admin log in which isn't very appealing.
+
+* With more resource and time, I would like to add a testimonial section into the webiste, this is something that potentially could influence a user to get in contact with myself.
+
 ## Technologies Used
 
 ### Languages
