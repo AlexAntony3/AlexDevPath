@@ -372,17 +372,35 @@ All of these elements improve the user interactivity and also if any errors or m
 
 ### Languages
 
-* HTML
-* CSS
-* Python
+* [HTML5](https://www.w3schools.com/html/)
+* [CSS3](https://www.w3schools.com/css/)
+* [Python 3.8.11](https://www.python.org/downloads/release/python-3811/)
 
 ### Libraries and Frameworks
 
+* [Django 3.2.20](https://www.djangoproject.com/)
+* [Cloudinary 1.33.0](https://cloudinary.com/)
+* [Gunicorn 20.1.0](https://gunicorn.org/)
+* [Psycopg2 2.9.6](https://pypi.org/project/psycopg2/)
+* [Google Fonts](https://fonts.google.com/)
+* [Bootstrap 5.0.2](https://blog.getbootstrap.com/2021/06/22/bootstrap-5-0-2/)
+
 ### Tools
 
-* GitPod
-* GitHub
-* Git
+* [GitPod](https://www.gitpod.io/) 
+* [GitHub](https://github.com/)
+* [Git](https://git-scm.com/)
+* [Heroku]((https://www.heroku.com))
+* [ElephantSQL](https://www.elephantsql.com/)
+* [SQLite3](https://www.sqlite.org/index.html)
+* [Devicon](https://devicon.dev/)
+* [FontAwesome](https://fontawesome.com/)
+* [AmIResponsive](https://ui.dev/amiresponsive)
+* [Balsamiq](https://balsamiq.com/wireframes/?gad=1&gclid=CjwKCAjwr_CnBhA0EiwAci5sikJlbA3yk1dYGRdNiY0Krv7_98bWbqabFd_DxfjzG1-J7kWnl2-byhoC2cIQAvD_BwE)
+* [W3C Validator](https://validator.w3.org/)
+* [W3C CSS Validator](https://jigsaw.w3.org/css-validator/)
+* [CI pep8 linter](https://pep8ci.herokuapp.com/)
+* [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/)
 
 ## Deployment
 
