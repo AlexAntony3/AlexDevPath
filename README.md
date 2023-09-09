@@ -74,9 +74,13 @@ Another agile principle used was the MoSCoW method. The MoSCoW prioritisation me
 - The website must be responsive to all screen sizes.
 - The colour pallette must be consistent all the way through.
 
-## Design
+## Design & Structure
 
 The design aspect of the website is a challenging topic as I religiously use pastel colours which I have seen to not be a great hit when it comes to enticing a user to stay in the website and also to make it stand out the crowd. For this reason, I completed a questionnaire which was completed by my collegues and friends to see what colour scheme they would prefer to see in a portfolio related page. The design choices laid ahead are the decisions made from the answers in the questionnaire. 
+
+For the structure of the page, I reviewed multiple portfolio websites to see what elements really stood out and what I liked. I observed that there were multiple different styles of portfolios and decided to pick specifics from each one, a standout item for me was the use of a carousel for projects and testimonials. This puts a fun twist on a generically observed card display of projects. It further encourages users to engage with the website. 
+
+Finally and mainly the CRUD functionality is what is required for a fully dynamic website. After thorough research, I found that dashboards with the use of tables allowed for a more user friendly interface. The Staff member(s) that will be authorised to run the website will be able to easily navigate through and only be able to edit/view/delete/create within restriction. 
 
 ### Colour Scheme
 
@@ -103,7 +107,33 @@ As the webpage is designed to show my professional and educational life, it was 
 * Source Code Pro is the main font for all text within the website, this portrays a coding stlye making it relevant to the website purpose. Furthermore the readability of the font is clear and spaced out well.
 * Kanit is the other font used in the project, this font is to be used for all titles and the logo. It is a clear bold font and it stands out from the page. 
 
+### Breakpoints
+
+For breakpoints within this website, there were some minor aspects using media queries however the vast majority of the breakpoints were controlled using bootstrap elements. The main requirement of the breakpoints were to set a limit, that being that as per bootstrap documentation, the minimum size the website must be functional and responsive to is 320px.
+
 ### Wireframes
+
+My initial ideas after research was sketched out using [Balsamiq](https://balsamiq.com/wireframes/). This was an effective method as I was able to gather my ideas and see which worked best. However, when completing the project, I noticed myself not likig my inital proposed ideas and changing to different ideas. However the general structure of the wireframes have been reflected in the final design. 
+
+<details>
+
+<summary>Large Screens</summary> 
+
+![Large Screen](documentation/portfolio-large.png)
+
+![Large Screen Dashboard](documentation/dashboard-large.png)
+
+</details>
+
+<details>
+
+<summary>Small Screen</summary> 
+
+![Small Screen](documentation/portfolio-small.png)
+
+![Small Screen Dashboard](documentation/dashboard-small.png)
+
+</details>
 
 ## Database Structure
 
