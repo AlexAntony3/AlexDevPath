@@ -129,13 +129,17 @@ My initial ideas after research was sketched out using [Balsamiq](https://balsam
 
 <summary>Small Screen</summary> 
 
-![Small Screen](docs/portfolio-small.png)
+![Small Screen](docs/portfolio-mobile.png)
 
-![Small Screen Dashboard](docs/dashboard-small.png)
+![Small Screen Dashboard](docs/Dashboard-small.png)
 
 </details>
 
 ## Database Structure
+
+To develop the database schema, i used [DrawSQL](https://drawsql.app/). I was able to visualise what fields linked with what fields using this, however as I'm completing a portfolio website there was only one relationship that was possible to be built. That relationship was a many to many relation of the skills to the project. This is because many projects can have many skills associated to them and vice versa. 
+
+![Database Schema](docs/database-schema.png)
 
 ### Home Model
 
@@ -158,7 +162,6 @@ My initial ideas after research was sketched out using [Balsamiq](https://balsam
 |  nationality |    CharField    |        (max_length=200)       |
 |   languages  |    CharField    |        (max_length=200)       |
 |    address   |    CharField    | (max_length=400, unique=True) |
-|   freelance  |   BooleanField  |        (default=False)        |
 
 ### Project Model
 
@@ -177,7 +180,7 @@ My initial ideas after research was sketched out using [Balsamiq](https://balsam
 |:-----------:|:---------------:|:----------------:|
 |     name    |    CharField    | (max_length=100) |
 | proficiency |   IntegerField  |        ()        |
-|     icon    | CloudinaryField |     ('image')    |
+|     icon    | CharField |     (max_length=100)    |
 
 ### Experience Model
 
@@ -186,7 +189,6 @@ My initial ideas after research was sketched out using [Balsamiq](https://balsam
 |     role    | CharField | (max_length=200) |
 |   company   | CharField | (max_length=300) |
 |  start_date | DateField |        ()        |
-|   end_date  | DateField |        ()        |
 | description | TextField |        ()        |
 
 ### Education Model
@@ -196,7 +198,6 @@ My initial ideas after research was sketched out using [Balsamiq](https://balsam
 |   institute   | CharField |     (max_length=200)    |
 | qualification | CharField |     (max_length=200)    |
 |   start_date  | DateField |            ()           |
-|    end_date   | DateField |            ()           |
 |  description  | TextField | (null=True, blank=True) |
 
 ### Contact Model
@@ -214,6 +215,7 @@ My initial ideas after research was sketched out using [Balsamiq](https://balsam
 
 * HTML
 * CSS
+* Python
 
 ### Libraries and Frameworks
 
