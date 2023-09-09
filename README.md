@@ -29,12 +29,12 @@ Another agile principle used was the MoSCoW method. The MoSCoW prioritisation me
 
 - As a user, I expect every web page to be consistent with the same header and footer. [#9](https://github.com/AlexAntony3/AlexDevPath/issues/9)
 - As a user, I want to be able to see the work history of the Alex. [#49](https://github.com/AlexAntony3/AlexDevPath/issues/49)
-- As a user, I want to be able to see a picture of Alex with a short description about himself.
-- As a user, I want to be able to see the projects Alex has completed.
-- As a user, I want to be able to contact Alex with a message.
+- As a user, I want to be able to see a picture of Alex with a short description about himself. [#50](https://github.com/AlexAntony3/AlexDevPath/issues/50)
+- As a user, I want to be able to see the projects Alex has completed. [#55](https://github.com/AlexAntony3/AlexDevPath/issues/51)
+- As a user, I want to be able to contact Alex with a message. [#51](https://github.com/AlexAntony3/AlexDevPath/issues/51)
 - As a user, I want to be able to see Alex's skill set. [#14](https://github.com/AlexAntony3/AlexDevPath/issues/14)
 - As a user, I expect an easily navigatable web page that is simple. [#24](https://github.com/AlexAntony3/AlexDevPath/issues/24)
-- As a user, I want to be able to see skills, proficincies and icon owner.
+- As a user, I want to be able to see skills, proficincies and icons. [#56](https://github.com/AlexAntony3/AlexDevPath/issues/51)
 - As a user, I expect to be able to follow Alex on social media through the footer. [#16](https://github.com/AlexAntony3/AlexDevPath/issues/16)
 
 ### Staff Member Stories
@@ -47,16 +47,16 @@ Another agile principle used was the MoSCoW method. The MoSCoW prioritisation me
 - As a staff member, I want to be able to edit any skills to the website. [#14](https://github.com/AlexAntony3/AlexDevPath/issues/14)
 - As a staff member, I want to be able to delete any skills to the website. [#23](https://github.com/AlexAntony3/AlexDevPath/issues/23)   
 - As a staff member, I expect the interface to be simple to use. [#24](https://github.com/AlexAntony3/AlexDevPath/issues/24)
-- As a staff member, I want to be able to have full CRUD functioanlity for the education section.
-- As a staff member, I want to be able to have full CRUD functioanlity for the Experience section.
-- As a staff member, I want to be able to have edit functioanlity for the about section.
+- As a staff member, I want to be able to have full CRUD functioanlity for the education section. [#52](https://github.com/AlexAntony3/AlexDevPath/issues/52)
+- As a staff member, I want to be able to have full CRUD functioanlity for the Experience section. [#53](https://github.com/AlexAntony3/AlexDevPath/issues/53)
+- As a staff member, I want to be able to have edit functioanlity for the about section. [#54](https://github.com/AlexAntony3/AlexDevPath/issues/54)
 
 ### Developer Goals
 
-- The site should restrict users from entering invalid data into forms
-- The form must contain placeholder text in all fields to make it easier for the user to use. [#12](https://github.com/AlexAntony3/AlexDevPath/issues/12)
+- The site should restrict users from entering invalid data into forms 
+- The form must contain placeholder text in all fields to make it easier for the user to use.
 - A notification must appear when a user has logged out.
-- The website is viable and accessible on all browsers.#
+- The website is viable and accessible on all browsers.
 - The website attractive and different when compared to other portfolio websites to make it stand out.
 - The website is responsive to multiple different size screens.
 
