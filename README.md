@@ -131,7 +131,7 @@ My initial ideas after research was sketched out using [Balsamiq](https://balsam
 
 ![Small Screen](docs/portfolio-mobile.png)
 
-![Small Screen Dashboard](docs/Dashboard-small.png)
+![Small Screen Dashboard](docs/dashboard-mobile.png)
 
 </details>
 
@@ -208,6 +208,46 @@ To develop the database schema, i used [DrawSQL](https://drawsql.app/). I was ab
 |   number   |  CharField |  (max_length=16) |
 |    email   | EmailField |        ()        |
 |   message  |  TextField |        ()        |
+
+## Existing Features
+
+### Header and Navigation Bar
+
+* The header and navigation bar are elements that stay consistent throughout the project. This provides the user with a better user experience and allows them keep engaged within the website.
+
+* The header and navigation bar consists of a logo that was created using [Photopea](https://www.photopea.com/). The main thing noted is that the colour scheme is closely followed and the hovering feature also follows the same tones for consistency and as they are contrasting colours, it stands out of the page.
+
+* The key hidden functionality of the nav bar is that when a user is logged in as a staff, the nav bar changes so that they can have access to the dashboard and also gives them an option to log out if they want to. This feature is implemented using a drop down that is intuitive and easy to use.
+
+* The header and navigation bar is also dynamic as in lower screen sizes the hamburger icon appears and the navbar drops vertically which is the industry standard. 
+
+**Large Screen Header**
+[add header photo here]
+
+**Staff Large Screen Header**
+[add staff header photo]
+
+**Small Screen Header**
+[add small screen header]
+
+**Small Staff Screen Header**
+[add small staff screen header]
+
+**Post Logout**
+[add post logout screen]
+
+### Home Screen
+
+* The home screen contains a brief introduction into who I am, a little bit of my experience, and an avatar picture. This was something else I noted was very popular among other developers when creating a portfolio.
+
+* The main element noted in the home screen is the bright background which contrasts heavily against the navigation bar and the next section. A pattern is included within the background so that more intricasy is introduced into the webise. 
+
+**Home Screen Large**
+[add home screen here]
+
+**Home Screen Small**
+[add home screen here]
+
 
 ## Technologies Used
 
