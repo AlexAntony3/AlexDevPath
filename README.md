@@ -8,11 +8,11 @@ The website allows an administrator or staff to login using a pre-registered log
 ## Agile Methodologies
 As mentioned in the introduciton, agile principles were utilised throughout this project to plan and complete all aspects of the project. The agile method that was mainly utilised in this project was the use of GitHub issues which were further categorised into milestones and epics to seperate out tasks for various aspects of the project. The issues were then added onto a Kanban project board through GitHub as shown below: 
 
-[screenshot of Kanban]
+![Kanban board](docs/kanban.png "Kanban")
 
-The main GitHub issues laid out were user stories, each user stories contains acceptance criteria. These requirements were sometimes adjusted as through the course of the project, unplanned events and new ideas occurred therefore this was added or deleted as required. 
+The main GitHub issues laid out were user stories, each user stories contains acceptance criteria. These requirements were sometimes adjusted as through the course of the project, unplanned events and new ideas occurred therefore this was added or deleted as required. Throughout development, I was able to learn more about how Django works and its capabilities and therefore more user stories were added to improve the usability of the website.
 
-Another agile principle used was the MoSCoW method. The MoSCoW prioritisation method enabled me to understand what elements within the project were 'must haves', 'should have', 'could have' and more. This allowed me to make sure that I spent the most amount of time ensuring that the must haves were completed first.
+Another agile principle used was the MoSCoW method. The MoSCoW prioritisation method enabled me to understand what elements within the project were 'must haves', 'should have', 'could have' and more. This allowed me to make sure that I spent the most amount of time ensuring that the must haves were completed first. This aided development as the fundamentals were created first in order to be able to alter them by styling or by a change of mind at a later stage with ease.
 
 ## User Experience (UX)
 
@@ -22,40 +22,41 @@ Another agile principle used was the MoSCoW method. The MoSCoW prioritisation me
 - A form is required whereby the user can send me a message for any enquiries.
 - Validation is required throughout to provide users with any feedback required.
 - I can review the database to manage user's forms.
-- A staff/admin login for myself and staff to manage CRUD functionality for new projects and skills. 
-- Professional and modern design.
+- A staff/admin login for myself and staff to manage CRUD functionality for new projects, skills, experience and education.  
+- Professional and modern design. 
 
 ### User (guest) Stories
 
-- As a user, I expect every web page to be consistent with the same header and footer.
-- As a user, I want to be able to see the work history of the Alex.
+- As a user, I expect every web page to be consistent with the same header and footer. [#9](https://github.com/AlexAntony3/AlexDevPath/issues/9)
+- As a user, I want to be able to see the work history of the Alex. [#49](https://github.com/AlexAntony3/AlexDevPath/issues/49)
 - As a user, I want to be able to see a picture of Alex with a short description about himself.
 - As a user, I want to be able to see the projects Alex has completed.
 - As a user, I want to be able to contact Alex with a message.
-- As a user, I want to be able to download Alex's CV.
-- As a user, I want to be able to see Alex's skill set.
-- As a user, I expect an easily navigatable web page that is simple.
-- As a user, I want to be able to see skills, proficincies and expectations of the site owner.
-- As a user, I expect to be able to follow Alex on social media through the footer.
+- As a user, I want to be able to see Alex's skill set. [#14](https://github.com/AlexAntony3/AlexDevPath/issues/14)
+- As a user, I expect an easily navigatable web page that is simple. [#24](https://github.com/AlexAntony3/AlexDevPath/issues/24)
+- As a user, I want to be able to see skills, proficincies and icon owner.
+- As a user, I expect to be able to follow Alex on social media through the footer. [#16](https://github.com/AlexAntony3/AlexDevPath/issues/16)
 
 ### Staff Member Stories
 
-- As a staff member, I want to have a higher access account compared to the user.
-- As a staff member, I want to be able to add any new project to the website.
-- As a staff member, I want to be able to edit any project to the website.
-- As a staff member, I want to be able to delete any project to the website.
-- As a staff member, I want to be able to add any new skills to the website.
-- As a staff member, I want to be able to edit any skills to the website.
-- As a staff member, I want to be able to delete any skills to the website.    
-- As a staff member, I expect the interface to be simple to use. 
+- As a staff member, I want to have a higher access account compared to the user. [#17](https://github.com/AlexAntony3/AlexDevPath/issues/17)
+- As a staff member, I want to be able to add any new project to the website. [#18](https://github.com/AlexAntony3/AlexDevPath/issues/18)
+- As a staff member, I want to be able to edit any project to the website. [#19](https://github.com/AlexAntony3/AlexDevPath/issues/19)
+- As a staff member, I want to be able to delete any project to the website. [#20](https://github.com/AlexAntony3/AlexDevPath/issues/20)
+- As a staff member, I want to be able to add any new skills to the website. [#14](https://github.com/AlexAntony3/AlexDevPath/issues/14)
+- As a staff member, I want to be able to edit any skills to the website. [#14](https://github.com/AlexAntony3/AlexDevPath/issues/14)
+- As a staff member, I want to be able to delete any skills to the website. [#23](https://github.com/AlexAntony3/AlexDevPath/issues/23)   
+- As a staff member, I expect the interface to be simple to use. [#24](https://github.com/AlexAntony3/AlexDevPath/issues/24)
+- As a staff member, I want to be able to have full CRUD functioanlity for the education section.
+- As a staff member, I want to be able to have full CRUD functioanlity for the Experience section.
+- As a staff member, I want to be able to have edit functioanlity for the about section.
 
 ### Developer Goals
 
 - The site should restrict users from entering invalid data into forms
-- The form must contain placeholder text in all fields to make it easier for the user to use.
-- A notification must appear when a user has successfully logged in.
+- The form must contain placeholder text in all fields to make it easier for the user to use. [#12](https://github.com/AlexAntony3/AlexDevPath/issues/12)
 - A notification must appear when a user has logged out.
-- The website is viable and accessible on all browsers.
+- The website is viable and accessible on all browsers.#
 - The website attractive and different when compared to other portfolio websites to make it stand out.
 - The website is responsive to multiple different size screens.
 
