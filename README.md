@@ -119,9 +119,9 @@ My initial ideas after research was sketched out using [Balsamiq](https://balsam
 
 <summary>Large Screens</summary> 
 
-![Large Screen](documentation/portfolio-large.png)
+![Large Screen](docs/portfolio-large.png)
 
-![Large Screen Dashboard](documentation/dashboard-large.png)
+![Large Screen Dashboard](docs/dashboard-large.png)
 
 </details>
 
@@ -129,9 +129,9 @@ My initial ideas after research was sketched out using [Balsamiq](https://balsam
 
 <summary>Small Screen</summary> 
 
-![Small Screen](documentation/portfolio-small.png)
+![Small Screen](docs/portfolio-small.png)
 
-![Small Screen Dashboard](documentation/dashboard-small.png)
+![Small Screen Dashboard](docs/dashboard-small.png)
 
 </details>
 
