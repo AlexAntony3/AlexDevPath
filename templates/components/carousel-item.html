@@ -2,7 +2,7 @@
 {% if forloop.counter0 == 0 %}
 <div class="carousel-item active">
     <img src="{{ project.thumbnail.url }}" class="d-block w-100" alt="{{ project.name }}">
-    <div class="carousel-caption d-none d-md-block">
+    <div class="carousel-caption .d-none .d-sm-block">
         <h5>{{ project.name }}</h5>
         <a href="{{ project.live_url }}" class="btn btn-success project-links" target="_blank">Live Link</a>
         <a href="{{ project.github_URL }}" class="btn btn-danger project-links" target="_blank">Github Link</a>
